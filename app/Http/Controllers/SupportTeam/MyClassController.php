@@ -8,6 +8,7 @@ use App\Http\Requests\MyClass\ClassUpdate;
 use App\Repositories\MyClassRepo;
 use App\Repositories\UserRepo;
 use App\Http\Controllers\Controller;
+use App\Models\MyClass;
 
 class MyClassController extends Controller
 {
@@ -32,8 +33,10 @@ class MyClassController extends Controller
 
     public function store(ClassCreate $req)
     {
+        
         $data = $req->all();
-        $mc = $this->my_class->create($data);
+        
+        $mc = MyClass::create($data);
 
         // Create Default Section
         $s =['my_class_id' => $mc->id,
@@ -44,7 +47,7 @@ class MyClassController extends Controller
 
         $this->my_class->createSection($s);
 
-        return Qs::jsonStoreOk();
+        return back()->with('flash_success', __('Record Created Successfully'));
     }
 
     public function edit($id)
