@@ -33,6 +33,7 @@ class StudentRecordController extends Controller
 
     public function reset_pass($st_id)
     {
+        
         $st_id = Qs::decodeHash($st_id);
         $data['password'] = Hash::make('student');
         $this->user->update($st_id, $data);

@@ -97,7 +97,7 @@
             color: #000;
         }
         .card {
-            border: 2px solid #f41043!important;
+            border: 2px solid #ffffff00!important;
         }
         .card p{
             color: #000;
@@ -213,51 +213,43 @@
     @if(Qs::userIsTeacher())
 {{--        {{dd('in teacher if')}}--}}
     <style>
-        .card1 {
-            height: 486px!important;
-            min-height: 486px!important;
-        }
-        .card1 .card-body {
-            height: 200px;
-            overflow-x: hidden;
-        }
-        .card2{
-            height: 233px;
-
-        }
-        .card2 .card-body{
-            height: 200px;
-            overflow-x: hidden;
-
-        }
-        .card .card-header h3 {
-            border-bottom: 2px solid #f41043;
-            display: block;
-            font-size: 20px;
-            line-height: 25px;
-            padding: 0 0 10px;
-            color: #000;
-        }
-        .card {
-            border: 2px solid #f41043!important;
-        }
-        .card p{
-            color: #000;
-        }
-        .card h5{
-            color: #000;
-        }
 
     </style>
     <div class="row">
-        <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="card card1 border-primary mb-3" >
                 <div class="card-header"><h3>MY LATEST UPDATES</h3></div>
                 <div class="card-body text-primary">
-                    @foreach($teacher_updates as $tu)
-                        <h5 class="card-title">{{$tu->title}}</h5>
-                        <p class="card-text"> {{$tu->details}}.</p>
-                    @endforeach
+                    <div id="accordion">
+                    @foreach($teacher_updates as $key =>$tu)
+                    
+                        <div class="card">
+                          <div class="card-header" id="{{$tu->title}}">
+                            <h5 class="mb-0">
+
+
+
+                                
+                              <label class="btn" data-toggle="collapse" data-target="#{{$key + 1}}" aria-expanded="true" aria-controls="collapseOne">
+                                
+                                <h5 class="card-title">{{$tu->title}}</h5>
+                              </label>
+                            </h5>
+                          </div>
+                      
+                          <div id="{{$key + 1}}" class="collapse show" aria-labelledby="{{$tu->title}}" data-parent="#accordion">
+                            <div class="card-body">
+                                <p class="card-text"> {{$tu->details}}.</p>
+                            </div>
+                          </div>
+                        </div>
+                        @endforeach      
+                
+                      </div>
+
+
+
+
                 </div>
             </div>
         </div>

@@ -819,7 +819,7 @@
 
                     <li class="nav-item">
                         <a href="{{ route('std_paper.paper.index') }}"
-                           class="nav-link {{ in_array(Route::currentRouteName(), ['std_paper.paper.index']) ?  : '' }} btn-danger"><i
+                           class="nav-link {{ in_array(Route::currentRouteName(), ['std_paper.paper.index']) ?  : '' }} "><i
                                 class="fa fa-comments" aria-hidden="true"></i> <span>Start Online Exam</span></a>
                     </li>
 

@@ -69,6 +69,7 @@
 
                                 @php
                                     $stdAssignmentStatus =\App\Models\StudentAssignment::where('assignment_id',$assignment->id)->get();
+                             
                                 @endphp
                                 @if(count($stdAssignmentStatus)>0)
                                     <td > <a href="javascript:void(0)"> Submitted </a></td>
@@ -82,6 +83,7 @@
                                             <input type="file" name="file" id="file">
 
                                             <input type="hidden" name="assignment_id" value="{{$assignment->id}}">
+                                            <input type="submit">
                                         </form>
                                     </td>
                                 @endif

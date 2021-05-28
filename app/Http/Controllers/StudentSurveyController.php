@@ -8,6 +8,7 @@ use App\Models\StudentEvaluation;
 use App\Models\StudentSurvey;
 use Illuminate\Http\Request;
 use App\Repositories\SurvayRepo;
+use Auth;
 
 class StudentSurveyController extends Controller
 {
@@ -25,7 +26,16 @@ class StudentSurveyController extends Controller
      */
     public function index()
     {
-        $data = StudentEvaluation::all();
+        
+    
+        $userId = Auth::id();
+        
+
+        $std_survay_id = StudentSurvey::where('std_id',$userId)->pluck('question_id')->all();
+   
+        $data = StudentEvaluation::whereNotIn('id', $std_survay_id)->get();
+
+
         return view('pages.support_team.students.studentSurvay.index')->with('survay', $data);
     }
 

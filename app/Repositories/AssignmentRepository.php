@@ -66,7 +66,7 @@ class AssignmentRepository
 
     public function getAssignmentWithCourseId($courseRegs)
     {
-        return  TeacherAssignment::whereIn('course_id', [1, 2, 3])
+        return  TeacherAssignment::whereIn('course_id',$courseRegs)
             ->get();
     }
 

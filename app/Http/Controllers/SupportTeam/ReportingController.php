@@ -128,6 +128,7 @@ class ReportingController extends Controller
 
     public function teachers_list(Teacher $teacher)
     {
+        
         $mc = $this->teacher->getTeacherData();
         $teachers = $mc;
         return is_null($mc) ? Qs::goWithDanger() : view('pages.support_team.teachers.list', compact('teachers'));
@@ -135,8 +136,11 @@ class ReportingController extends Controller
 
     public function listByClass($class_id)
     {
+        
         $data['my_class'] = $mc = $this->my_class->getMC(['id' => $class_id])->first();
+        
         $data['students'] = $this->student->findStudentsByClass($class_id);
+    
         $data['sections'] = $this->my_class->getClassSections($class_id);
 
         return is_null($mc) ? Qs::goWithDanger() : view('pages.support_team.students.list', $data);

@@ -88,13 +88,17 @@
                                                             @endphp
                                                             
 
-                                                                 <li>
-                                                                    @foreach($std_surveys_ques as $std_surveys_que)
-                                                                    {{$std_survey->question_id}} {{ $std_surveys_que->question }}
-                                                                    @endforeach
-                                                                </li>
+                                                            <li>
+                                                                @foreach($std_surveys_ques as $std_surveys_que)
+                                                                Question No:{{$std_survey->question_id}} :- {{ $std_surveys_que->question }}
+                                                               
+                                                                <br>
+                                                                Answer:-  {{$std_survey->answer}}
+                                                                 <br><br>
+                                                                 @endforeach
+                                                            </li>
                                                             
-                                                            <li> {{$std_survey->answer}}</li>
+                                                            
                                                             
                                                             
                                                             

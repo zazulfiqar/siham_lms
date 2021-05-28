@@ -192,8 +192,7 @@
                                                 @if(Qs::userIsTeamSAT())
                                                     <a id="{{ $assignment->id }}"
                                                        href="{{ route('teacher_assignment.show', Qs::hash($assignment->id)) }}"
-                                                       class="dropdown-item"><i class="icon-trash"></i> showDelete</a>
-
+                                                       class="dropdown-item"><i class="icon-trash"></i> Delete</a>
                                                 @endif
                                             </div>
                                         </div>
