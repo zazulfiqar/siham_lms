@@ -26,13 +26,13 @@ class StudentSurveyController extends Controller
      */
     public function index()
     {
-        
-    
+
+
         $userId = Auth::id();
-        
+
 
         $std_survay_id = StudentSurvey::where('std_id',$userId)->pluck('question_id')->all();
-   
+
         $data = StudentEvaluation::whereNotIn('id', $std_survay_id)->get();
 
 
@@ -72,18 +72,10 @@ class StudentSurveyController extends Controller
     public function teacher_view_survey()
     {
 
+
         $teacher_id = \Auth::user()->id;
-//    get course id from courses
         $course_id = Courses::where('teacher_id', $teacher_id)->pluck('id');
-
-//    get students with respect to courses
-
         $courseReg = CourseRegistration::where('courses_id', $course_id)->get();
-//      list of students that are enroll in that particular course
-
-//        dd($courseReg);
-// make another controller route to complete this heraricy
-
         return view('pages.support_team.students.teacherStdFeedback',compact('courseReg'));
 
 //        dd('asdfasdfasd');
@@ -142,6 +134,40 @@ class StudentSurveyController extends Controller
      */
     public function destroy(StudentSurvey $studentSurvey)
     {
+        //
+    }
+
+
+    public function show_online_paper_result()
+    {
+
+      $id = $_GET['id'];
+
+    //   $StdOnlinePaper = StdOnlinePaper::where('std_id', '=' , '81')->get();
+
+      $std_online_papers = \DB::table('std_online_papers')
+      ->select()
+      ->join('online_papers', 'online_papers.id', '=', 'std_online_papers.question_id')
+      ->where('std_id', '=', $id)
+      ->select(
+        'std_online_papers.answer as std_online_papers_answer',
+        'online_papers.answer as online_papers_answer',
+        'online_papers.choice1',
+        'online_papers.choice2',
+        'online_papers.choice3',
+        'online_papers.choice4',
+    )
+      ->get();
+
+    //   echo "<pre>";
+    //   print_r($std_online_papers);
+    //   echo "</pre>";
+
+    //     exit();
+
+
+        return view('pages.support_team.students.studentSurvay.show_online_result',compact('std_online_papers'));
+
         //
     }
 }

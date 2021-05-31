@@ -79,6 +79,7 @@ Route::group(['middleware' => 'auth'], function () {
             Route::get('/general_courses', [OfferedCoursesController::class, 'index'])->name('students.offered_courses');
             Route::get('/private_courses', [OfferedCoursesController::class, 'privateCourses'])->name('students.private_courses');
             Route::get('/course_register_store/{id}', [CourseRegistrationController::class, 'store'])->name('students.course_register.store');
+            Route::get('/show_online_paper_result', [StudentSurveyController::class, 'show_online_paper_result'])->name('show_online_paper_result');
             Route::get('/survey', [StudentSurveyController::class, 'index'])->name('students.survey');
             Route::get('/curriculum', [CurriculumController::class, 'index'])->name('students.curriculum');
             Route::get('/drop_a_complain', [ApplicationController::class, 'drop_a_complain'])->name('students.drop_a_complain');
@@ -304,6 +305,14 @@ Route::post('/UploadLecture_Update/{id}', [LectureController::class, 'update'])-
 Route::post('/UploadLecture_Destroy/{id}', [LectureController::class, 'destroy'])->name('teacher.lecture.destroy');
 
 Route::get('/create_paper', [PaperController::class, 'index'])->name('teacher.paper');
+Route::get('/ResultList', [PaperController::class, 'resultIndex'])->name('teacher.resultlist');
+// Route::get('/resultbypaper', [PaperController::class, 'resultbypaper'])->name('teacher.resultbypaper');
+Route::get('resultbypaper',  [PaperController::class, 'resultbypaper'])->name('teacher.resultbypaper');
+Route::get('resultbypaperAnswer',  [PaperController::class, 'resultbypaperAnswer'])->name('teacher.resultbypaperAnswer');
+
+
+
+
 Route::post('/paper_store', [PaperController::class, 'store'])->name('teacher.paper.store');
 Route::get('/paper_edit/{id}', [PaperController::class, 'edit'])->name('teacher.paper.edit');
 Route::post('/paper_Update/{id}', [PaperController::class, 'update'])->name('teacher.paper.update');

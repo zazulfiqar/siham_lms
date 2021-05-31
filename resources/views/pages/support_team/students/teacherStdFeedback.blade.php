@@ -49,6 +49,7 @@
                                             data-target="#exampleModal{{$courReg->id}}">
                                         view Feedback
                                     </button>
+                                    <a href="{{'students/show_online_paper_result?id='.$courReg->user_id}}" class="btn btn-primary">Result</a>
                                 </td>
 
                                 <div class="modal fade" id="exampleModal{{$courReg->id}}" tabindex="-1" role="dialog"
@@ -83,26 +84,26 @@
 
 
 
-                                                            @php 
+                                                            @php
                                                              $std_surveys_ques  = \App\Models\StudentEvaluation::where('id',$std_survey->question_id)->get();
                                                             @endphp
-                                                            
+
 
                                                             <li>
                                                                 @foreach($std_surveys_ques as $std_surveys_que)
                                                                 Question No:{{$std_survey->question_id}} :- {{ $std_surveys_que->question }}
-                                                               
+
                                                                 <br>
                                                                 Answer:-  {{$std_survey->answer}}
                                                                  <br><br>
                                                                  @endforeach
                                                             </li>
-                                                            
-                                                            
-                                                            
-                                                            
-                                                            
-                                                            
+
+
+
+
+
+
 {{--                                                        @endif--}}
 
                                                     </ul>

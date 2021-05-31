@@ -685,12 +685,18 @@
                     <!--</li>-->
 
 
-                    <li class="nav-item btn-danger">
+                    <li class="nav-item">
                         <a href="{{ route('teacher.paper') }}"
-                           class="nav-link "
-                        >
+                           class="nav-link ">
                             <i class="fa fa-clock-o" aria-hidden="true"></i>
                             <span>Create Paper</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ route('teacher.resultlist') }}"
+                           class="nav-link ">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <span>Result List</span></a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('teacher.scheduleAClass') }}"
