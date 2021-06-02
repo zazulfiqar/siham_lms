@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Helpers\Qs;
 use App\Models\ClassSchedule;
+use App\Models\CourseRegistration;
 use App\Repositories\MyClassRepo;
 use App\Repositories\UserRepo;
 use Illuminate\Http\Request;
 use App\Repositories\TeacherRepository;
-
+use Illuminate\Support\Facades\DB;
 class ClassScheduleController extends Controller
 {
     protected $my_class, $user;
@@ -45,8 +46,14 @@ class ClassScheduleController extends Controller
 
     public function index()
     {
-
-        return view('pages.support_team.classSchedules.index');
+        $data=ClassSchedule::all();
+        $id = \Auth::user()->id;
+        $cr = CourseRegistration::where('user_id', $id)->pluck('courses_id');
+        $zoomlink = DB::table('class_schedules')
+        ->whereIn('course_id', $cr)
+        ->get();
+    $d['schedule'] = $zoomlink;
+        return view('pages.support_team.classSchedules.index', $d);
     }
 
     public function create()

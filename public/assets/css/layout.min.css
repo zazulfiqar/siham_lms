@@ -23,6 +23,7 @@ body {
 }
 
 .content-wrapper {
+    background-color: white;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -265,6 +266,7 @@ body {
 }
 
 .nav-sidebar .nav-link i {
+    font-size: 26px;
     margin-right: 1.25rem;
     margin-top: .12502rem;
     margin-bottom: .12502rem;
@@ -525,7 +527,7 @@ body {
 
 .sidebar-dark .nav-sidebar .nav-link,
 .sidebar-light .card[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent) .nav-sidebar .nav-link {
-    color: #000000e6;
+    color: #ffffffe6;
 }
 
 .sidebar-dark .nav-sidebar .nav-link:not(.disabled):hover,
@@ -678,7 +680,7 @@ body {
 
 @media (min-width:768px) {
     .sidebar-xs .sidebar-main {
-        width: 5.5rem
+        width: 3.5rem;
     }
     .sidebar-xs .sidebar-main .sidebar-content::-webkit-scrollbar {
         width: 0!important
@@ -796,7 +798,7 @@ body {
         background-color: rgba(0, 0, 0, .15)
     }
     .sidebar-xs .sidebar-main.sidebar-dark .nav-sidebar>.nav-item-submenu>.nav-group-sub {
-        background-color: #304047;
+        background-color: #ffffff;
         border-left: 1px solid rgba(255, 255, 255, .1)
     }
     .sidebar-xs .sidebar-main.sidebar-light .nav-sidebar>.nav-item:not(.nav-item-open):hover>.nav-link:not(.active):not(.disabled) {
@@ -1421,5 +1423,5 @@ body {
 }
 
 .sidebar.sidebar-dark.sidebar-main.sidebar-expand-md {
-    background-color: #ffffff !important;
+    background-color: #f41043 !important;
 }

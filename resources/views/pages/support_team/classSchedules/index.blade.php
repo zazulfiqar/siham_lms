@@ -8,83 +8,71 @@
             {!! Qs::getPanelOptions() !!}
         </div>
 
-        <div class="card-body">
-            <ul class="nav nav-tabs nav-tabs-highlight">
-                <li class="nav-item"><a href="#all-classes" class="nav-link active" data-toggle="tab">CURRENT SEMESTER
-                      </a></li>
-{{--                <li class="nav-item"><a href="#all-classes" class="nav-link active" data-toggle="tab">RULES REGAURDING ATTENDANCE--}}
-{{--                    </a></li>--}}
-{{--                <li class="nav-item"><a href="#new-class" class="nav-link" data-toggle="tab"><i class="icon-plus2"></i>--}}
-{{--                        Create New Policy</a></li>--}}
-            </ul>
-
-            <div class="tab-content">
-                <div class="tab-pane fade show active" id="all-classes">
-
-
-                    {{--                    @foreach($policies as $policy)--}}
-{{--                        {{dd($policy->id)}}--}}
-
-{{--                        <div>--}}
-{{--                            {{$policy->policy}}--}}
-
-{{--                        </div>--}}
-
-{{--                    @endforeach--}}
-
-                                        <table class="table datatable-button-html5-columns">
+                    <table class="table datatable-button-html5-columns">
                         <thead>
                         <tr>
+                            <th>S/N</th>
+                            <th>Course</th>
+                            {{-- <th>Teacher</th> --}}
                             <th>Time</th>
-                            <th>Course Name</th>
-                            <th>Faculty Name</th>
                             <th>Zoom Link</th>
+                            {{-- <th>Action</th> --}}
                         </tr>
                         </thead>
                         <tbody>
 
-{{--                        @foreach($policy as $p)--}}
-
+                        @foreach($schedule as $s)
                             <tr>
-                                <td> Wed 8:30 - 13 </td>
-                                <td> Data Science </td>
-                                <td> Faculty name </td>
-                                <td>
-                                    <a target="_blank" href="https://zoom.us/j/2402729010?pwd=bDFuMGN1cUhOMUZjV0w4N2sxNm55QT09">
-                                        click here
-                                    </a>
+                                <td>{{ $loop->iteration }}</td>
+                                @if(isset($s->course_id))
 
-                                </td>
+                                    <td>
 
+                                        @php
+                                        $papersData  = \App\Models\Courses::where('id',$s->course_id)->first();
 
-{{--                                <td class="text-center">--}}
-{{--                                    <div class="list-icons">--}}
-{{--                                        <div class="dropdown">--}}
-{{--                                            <a href="#" class="list-icons-item" data-toggle="dropdown">--}}
-{{--                                                <i class="icon-menu9"></i>--}}
-{{--                                            </a>--}}
+                                      @endphp
+                                        {{ $papersData->name }}
 
-{{--                                            <div class="dropdown-menu dropdown-menu-left">--}}
-{{--                                                @if(Qs::userIsTeamSA())--}}
-{{--                                                    Edit--}}
-{{--                                                    <a href="{{ route('policies.edit', $p->id) }}" class="dropdown-item"><i--}}
-{{--                                                            class="icon-pencil"></i> Edit</a>--}}
-{{--                                                @endif--}}
-{{--                                                @if(Qs::userIsSuperAdmin())--}}
-{{--                                                    Delete--}}
-{{--                                                    <a id="{{ $p->id }}" onclick="confirmDelete(this.id)" href="#"--}}
-{{--                                                       class="dropdown-item"><i class="icon-trash"></i> Delete</a>--}}
-{{--                                                    <form method="post" id="item-delete-{{ $p->id }}"--}}
-{{--                                                          action="{{ route('policies.destroy', $p->id) }}"--}}
-{{--                                                          class="hidden">@csrf @method('delete')</form>--}}
-{{--                                                @endif--}}
+                                    </td>
+                                @else
+                                    <td>No Course </td>
+                                @endif
 
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </td>--}}
+                                {{-- @if(isset($s->teachers->name) )
+                                    <td>{{ $s->teachers->name }} </td>
+                                @else
+                                    <td>teacher not assign</td>
+
+                                @endif --}}
+
+                                <td>{{ $s->time }} </td>
+
+                                <td><a target="_blank" href="{{ $s->zoom_link }}">{{ $s->zoom_link }} </a></td>
+
+                                {{-- <td class="text-center">
+                                    <div class="list-icons">
+                                        <div class="dropdown">
+                                            <a href="#" class="list-icons-item" data-toggle="dropdown">
+                                                <i class="icon-menu9"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-left">
+
+                                                <a href="{{ route('teacher.scheduleAClass.edit', Qs::hash($s->id)) }}"
+                                                   class="dropdown-item"><i class="icon-pencil"></i> Edit</a>
+
+                                                <a id="{{ $s->id }}" onclick="confirmDelete(this.id)" href="#"
+                                                   class="dropdown-item"><i class="icon-trash"></i> Delete</a>
+                                                <form method="post" id="item-delete-{{ $s->id }}"
+                                                      action="{{ route('teacher.scheduleAClass.destroy', Qs::hash($s->id)) }}"
+                                                      class="hidden">@csrf @method('post')</form>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td> --}}
                             </tr>
-{{--                        @endforeach--}}
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -105,7 +93,7 @@
                             {{--                            <form class="ajax-store" method="post" action="{{ route('policies.store') }}">--}}
 
                             <form class="" method="post" action="{{ route('policies.store') }}">
-
+@method('post');
                                 @csrf
                                 <div class="form-group row">
                                     <label for="class_type_id" class="col-lg-3 col-form-label font-weight-semibold">Role
