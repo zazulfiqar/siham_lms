@@ -53,12 +53,23 @@ class HomeController extends Controller
             $data=ClassSchedule::all();
             $id = \Auth::user()->id;
             $cr = CourseRegistration::where('user_id', $id)->pluck('courses_id');
+
             $zoomlink = DB::table('class_schedules')
             ->whereIn('course_id', $cr)
             ->get();
             $d['schedule'] = $zoomlink;
 
+            $assignmentsget = DB::table('teacher_assignments')
+            ->whereIn('course_id', $cr)
+            ->get();
+            $d['assignmentsget'] = $assignmentsget;
 
+            $idType = \Auth::user()->user_type;
+
+            $policy = DB::table('policies')
+            ->where('role_type', $idType)
+            ->get();
+            $d['policy'] = $policy;
 
 
 
@@ -74,6 +85,8 @@ class HomeController extends Controller
         ->with('student_instructions', $d['student_instructions'])
         ->with('student_notifications',$d['student_notifications'])
         ->with('schedule',$d['schedule'])
+        ->with('assignmentsget', $d['assignmentsget'])
+        ->with('policy', $d['policy'])
         ->with('student_updates',$d['student_updates']);
 
 

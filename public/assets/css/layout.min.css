@@ -15,6 +15,11 @@ body {
     flex: 1
 }
 
+.cardborderset {
+    border-left: 10px solid #f41043;
+    border-radius: 10px;
+}
+
 .page-content {
     display: -ms-flexbox;
     display: flex;

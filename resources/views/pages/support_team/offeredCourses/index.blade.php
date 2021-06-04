@@ -1,7 +1,22 @@
 @extends('layouts.master')
 @section('page_title', 'Offered Courses')
 @section('content')
-
+<style>
+.registerNowBtnDiv {
+    /* margin: 20px; */
+    text-align: center;
+    background-color: #f41043;
+    margin: 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    /* height: 30px; */
+    padding: 12px;
+}
+a.registerNowBtn {
+    color: white;
+}
+</style>
 <div class="card">
     <div class="card-header header-elements-inline">
         {{--            <h6 class="card-title">Current Semester</h6>--}}
@@ -40,8 +55,11 @@
                     </svg>
                         </span>
                     </a>
-                    <a  href="{{route('students.course_register.store',\App\Helpers\Qs::hash($course->id))}}">
-                        Register Now </a>
+                    <div class="registerNowBtnDiv">
+                        <a class="registerNowBtn" href="{{route('students.course_register.store',\App\Helpers\Qs::hash($course->id))}}">
+                            Register Now
+                        </a>
+                    </div>
                 </div>
                 @endforeach
             </div>
