@@ -17,8 +17,10 @@ class OfferedCoursesController extends Controller
     public function index()
     {
         $courses = Courses::all();
+
+        // dd($courses);
         $courseRegistration = CourseRegistration::pluck('id');
-//        dd($courseRegistration);
+
         return view('pages.support_team.offeredCourses.index', compact('courses', 'courseRegistration'));
     }
 

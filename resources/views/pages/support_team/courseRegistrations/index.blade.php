@@ -2,6 +2,12 @@
 @section('page_title', 'Registerated Courses ')
 @section('content')
 
+
+
+
+
+
+
     <div class="card">
         <div class="card-header header-elements-inline">
             {{--            <h6 class="card-title">Current Semester</h6>--}}
@@ -9,54 +15,36 @@
         </div>
 
         <div class="card-body">
-            <h3>These are the registered courses for this semester</h3>
-            <ul class="nav nav-tabs nav-tabs-highlight">
-                <li class="nav-item"><a href="#all-classes" class="nav-link active" data-toggle="tab">CURRENT SEMESTER
-                    </a></li>
-
-            </ul>
-
-            <div class="tab-content">
-                <div class="tab-pane fade show active" id="all-classes">
-
-
-                    <table class="table datatable-button-html5-columns">
-                        <thead>
-                        <tr>
-                            <th>Time</th>
-                            <th>Course Name</th>
-                            <th>Code</th>
-                            <th>Faculty Name</th>
-
-                        </tr>
-                        @foreach ($CourseRegisterd as $courseReg )
-                            <tr>
-                                @if($courseReg->time_slot)
-                                    <td>{{$courseReg->time_slot}}
-                                @else
-                                    <td>Time not allot</td>
-                                @endif
-                                <td>{{$courseReg->name}}</td>
-
-                                    <td>{{$courseReg->code}}</td>
+            <section class="page-contain">
+                <div class="row">
+                    @foreach ($CourseRegisterd as $courseReg )
+                    <div class="col-md-3">
+                        <a href="#" class="data-card">
+                            <h3>@if($courseReg->code)
+                                <td>{{$courseReg->code}}
+                            @else
+                                <td>Code Not Allot</td>
+                            @endif</h3>
+                            <h4>{{$courseReg->name}}</h4>
+                            <p>{{$courseReg->code}}</p>
+                            <span class="link-text">
                                 @php
-                                    $teacher_name =  \App\Models\Teacher::where('id',$courseReg->teacher_id)->value('name');
-                                @endphp
-                                <td>{{$teacher_name}}</td>
-
-                                {{-- <td>{{ $courseReg->course->name }}</td> --}}
-                                <td></td>
-
-                            </tr>
-                        @endforeach
-
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
+                                $teacher_name =  \App\Models\Teacher::where('id',$courseReg->teacher_id)->value('name');
+                            @endphp
+                            @if($teacher_name)
+                            {{$teacher_name}}
+                            @else
+                            Teacher Not Showing
+                            @endif
+                            <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8631 0.929124L24.2271 7.29308C24.6176 7.68361 24.6176 8.31677 24.2271 8.7073L17.8631 15.0713C17.4726 15.4618 16.8394 15.4618 16.4489 15.0713C16.0584 14.6807 16.0584 14.0476 16.4489 13.657L21.1058 9.00019H0.47998V7.00019H21.1058L16.4489 2.34334C16.0584 1.95281 16.0584 1.31965 16.4489 0.929124C16.8394 0.538599 17.4726 0.538599 17.8631 0.929124Z" fill="#753BBD"/>
+                        </svg>
+                            </span>
+                        </a>
+                    </div>
+                    @endforeach
                 </div>
-
-            </div>
+              </section>
         </div>
     </div>
 

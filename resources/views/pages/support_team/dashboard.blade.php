@@ -2,77 +2,10 @@
 @section('page_title', 'My Dashboard')
 @section('content')
 <style>
-
-@media(max-width:992px){
- .wrapper{
-  width:100%;
-}
-}
-.panel-heading {
-  padding: 0;
-	border:0;
-}
-.panel-title>a, .panel-title>a:active{
-	display:block;
-	padding:15px;
-  color:#555;
-  font-size:16px;
-  font-weight:bold;
-	text-transform:uppercase;
-	letter-spacing:1px;
-  word-spacing:3px;
-	text-decoration:none;
-}
-.panel-heading  a:before {
-   font-family: 'Glyphicons Halflings';
-   content: "\e114";
-   float: right;
-   transition: all 0.5s;
-}
-.panel-heading.active a:before {
-	-webkit-transform: rotate(180deg);
-	-moz-transform: rotate(180deg);
-	transform: rotate(180deg);
+.card-block {
+    padding: 12px;
 }
 
-
-
-.schedule {
-    width: 649px;
-    background-color: #eee;
-    padding: 11px;
-    margin: 3px auto;
-    font-size: 18px;
-    position: relative;
-    border-left-width: 5px;
-    border-left-style: solid;
-    border-left-color: #e91e63;
-}
-
-
-
-.schedule::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -25px;
-  margin-top: -10px;
-  border-color: transparent #e91e63 transparent transparent;
-  border-width: 10px;
-  border-style: solid;
-}
-.schedule_inner {
-    font-size: 14px;
-}
-.link_zoom {
-    font-size: 10px;
-    color: #1d58ff;
-}
-
-.time {
-    font-weight: 500;
-    font-size: 14px;
-}
 </style>
     @if(Qs::userIsTeamSA())
        <div class="row">
@@ -146,7 +79,7 @@
 
         <div class="card flex-row flex-wrap">
             <div class="card-footer w-100 text-muted">
-                Class Schedule
+                <i class="fa fa-clock-o" aria-hidden="true"></i>   Class Schedule
             </div>
 
                 @foreach($schedule as $s)
@@ -176,37 +109,44 @@
 
 {{-- Schedule Work Over --}}
 
-
-        <div class="wrapper center-block">
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                @foreach ($CourseRegisterd as $courseReg )
-            <div class="panel panel-default">
-              <div class="panel-heading active card-footer w-100 text-muted" role="tab" id="headingOne">
-                <h4 class="panel-title">
-                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#idhere{{ $loop->iteration }}" aria-expanded="true" aria-controls="collapseOne">
-                    {{$courseReg->name}}
-                  </a>
-                </h4>
-              </div>
-              <div id="idhere{{ $loop->iteration }}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
-                    Topic
-                    Course Name: {{$courseReg->name}}
-                    <br>
-                    Course Code: {{$courseReg->code}}
-                    <br>
-                     @php
+<div class="card flex-row flex-wrap">
+    <div class="card-footer w-100 text-muted">
+        My Registerd Courses
+    </div>
+<div class="card-body">
+    <section class="page-contain">
+        <div class="row">
+            @foreach ($CourseRegisterd as $courseReg )
+            <div class="col-md-4">
+                <a href="#" class="data-card">
+                    <h3>@if($courseReg->time_slot)
+                        <td>{{$courseReg->time_slot}}
+                    @else
+                        <td>Time Not Allot</td>
+                    @endif</h3>
+                    <h4>{{$courseReg->name}}</h4>
+                    <p>{{$courseReg->code}}</p>
+                    <span class="link-text">
+                        @php
                         $teacher_name =  \App\Models\Teacher::where('id',$courseReg->teacher_id)->value('name');
                     @endphp
-                    Faculty:{{$teacher_name}}
-                </div>
-              </div>
+                    @if($teacher_name)
+                    {{$teacher_name}}
+                    @else
+                    Teacher Not Showing
+                    @endif
+                    <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8631 0.929124L24.2271 7.29308C24.6176 7.68361 24.6176 8.31677 24.2271 8.7073L17.8631 15.0713C17.4726 15.4618 16.8394 15.4618 16.4489 15.0713C16.0584 14.6807 16.0584 14.0476 16.4489 13.657L21.1058 9.00019H0.47998V7.00019H21.1058L16.4489 2.34334C16.0584 1.95281 16.0584 1.31965 16.4489 0.929124C16.8394 0.538599 17.4726 0.538599 17.8631 0.929124Z" fill="#753BBD"/>
+                </svg>
+                    </span>
+                </a>
             </div>
-@endforeach
+            @endforeach
+        </div>
 
-
-          </div>
-          </div>
+      </section>
+</div>
+</div>
 
 
 
@@ -293,6 +233,69 @@
                 <div class="card-footer w-100 text-muted">
                     Notifications
                 </div>
+            @foreach($student_notifications as $key =>$sn)
+                <br>
+                <div class="card-block px-2">
+                    <h5 class="card-title">{{$sn->title}}</h5>
+                    <p class="card-text">{{$sn->details}}</p>
+                    <br>
+                </div>
+                <div class="w-100"></div>
+            </div>
+            @endforeach
+        </div>
+
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="card flex-row flex-wrap">
+                <div class="card-footer w-100 text-muted">
+                    Assignments
+                </div>
+                <div id="accordion" role="tablist" class="o-accordion">
+                    <div class="card">
+                      <div class="card-header" role="tab" id="headingOne">
+                        <h5 class="mb-0">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Collapsible Group Item #1
+                          </a>
+                        </h5>
+                      </div>
+
+                      <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="card-block">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" role="tab" id="headingTwo">
+                        <h5 class="mb-0">
+                          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Collapsible Group Item #2
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="card-block">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" role="tab" id="headingThree">
+                        <h5 class="mb-0">
+                          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Collapsible Group Item #3
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="card-block">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
             @foreach($student_notifications as $key =>$sn)
                 <br>
                 <div class="card-block px-2">

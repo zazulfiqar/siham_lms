@@ -2,82 +2,56 @@
 @section('page_title', 'Offered Courses')
 @section('content')
 
-
-    <div class="card">
-        <div class="card-header header-elements-inline">
-            {!! Qs::getPanelOptions() !!}
-        </div>
-        <div class="card-body">
-            <h3>These Courses are offered for this semester Click To Register</h3>
-            <ul class="nav nav-tabs nav-tabs-highlight">
-                <li class="nav-item"><a href="#all-classes" class="nav-link active" data-toggle="tab">CURRENT SEMESTER
-                    </a></li>
-
-            </ul>
-            <div class="tab-content">
-                <div class="tab-pane fade show active" id="all-classes">
-                    <table class="table datatable-button-html5-columns">
-                        <thead>
-                        <tr>
-                            <th>Time</th>
-                            <th>Course Name</th>
-                            <th>Faculty Name</th>
-                            <th>Register</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Sample Wed 8:30 - 13</td>
-                            <td>Sample Data Science</td>
-                            <td>Sample Faculty name</td>
-                            <td>
-                                <a href="#">
-                                    Sample register now </a>
-                            </td>
-                        </tr>
-                        @foreach($courses as $course)
-                            <tr>
-
-                                @if($course->time_slot == null || $course->time_slot == '')
-                                    <td>Not Assign</td>
-                                @else
-                                    <td>{{$course->time_slot}}</td>
-                                @endif
-                                @if($course->name)
-                                <td> {{$course->name}}{{$course->id}}</td>
-                                    @else
-                                        <td> Course </td>
-
-                                    @endif
-                                    @if(isset($course->teachers->name))
-                                <td> {{$course->teachers->name}}</td>
-                                        @else
-                                        <td>Teacher Not Assign Yet</td>
-                                    @endif
-                                    <td>
-                                        <a href="{{route('students.course_register.store',\App\Helpers\Qs::hash($course->id))}}">
-                                            register now </a>
-                                    </td>
-{{--                                @endif--}}
-
-
-                            </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="tab-pane fade" id="new-class">
-                    <div class="row">
-                        <div class="col-md-12">
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+<div class="card">
+    <div class="card-header header-elements-inline">
+        {{--            <h6 class="card-title">Current Semester</h6>--}}
+        {!! Qs::getPanelOptions() !!}
     </div>
+
+    <div class="card-body">
+        <section class="page-contain">
+            <div class="row">
+                @foreach($courses as $course)
+                <div class="col-md-3">
+                    <a href="#" class="data-card">
+                        <h3>@if($course->code == null || $course->code == '')
+                            Not Assign
+                        @else
+                            {{$course->code}}
+                        @endif</h3>
+                        <h4>
+                            @if($course->name)
+                                 {{$course->name}}{{$course->id}}
+                            @else
+                                 Course
+                            @endif
+                        </h4>
+                        <p>
+
+                        </p>
+                        <span class="link-text">
+                            @if(isset($course->teachers->name))
+                            <td> {{$course->teachers->name}}</td>
+                                    @else
+                                    <td>Teacher Not Assign Yet</td>
+                                @endif
+                        <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8631 0.929124L24.2271 7.29308C24.6176 7.68361 24.6176 8.31677 24.2271 8.7073L17.8631 15.0713C17.4726 15.4618 16.8394 15.4618 16.4489 15.0713C16.0584 14.6807 16.0584 14.0476 16.4489 13.657L21.1058 9.00019H0.47998V7.00019H21.1058L16.4489 2.34334C16.0584 1.95281 16.0584 1.31965 16.4489 0.929124C16.8394 0.538599 17.4726 0.538599 17.8631 0.929124Z" fill="#753BBD"/>
+                    </svg>
+                        </span>
+                    </a>
+                    <a  href="{{route('students.course_register.store',\App\Helpers\Qs::hash($course->id))}}">
+                        Register Now </a>
+                </div>
+                @endforeach
+            </div>
+          </section>
+    </div>
+</div>
+
+
+
+
 
 
 @endsection
