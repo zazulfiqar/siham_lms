@@ -11,7 +11,7 @@
         <div class="card-body">
             <ul class="nav nav-tabs nav-tabs-highlight">
                 <li class="nav-item"><a href="#all-classes" class="nav-link active" data-toggle="tab">Manage Complains</a></li>
-                <li class="nav-item"><a href="#new-class" class="nav-link" data-toggle="tab"><i class="icon-plus2"></i> Create New Complains</a></li>
+                {{-- <li class="nav-item"><a href="#new-class" class="nav-link" data-toggle="tab"><i class="icon-plus2"></i> Create New Complains</a></li> --}}
             </ul>
 
             <div class="tab-content">

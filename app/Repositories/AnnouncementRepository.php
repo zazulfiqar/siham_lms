@@ -138,7 +138,7 @@ class AnnouncementRepository
 
     public function updateStdUpdates($id, $data)
     {
-        return StudentsUpdates::find($id)->update($data);
+        return StudentsNotifications::find($id)->update($data);
     }
 
     public function deleteStdUpdates($id)

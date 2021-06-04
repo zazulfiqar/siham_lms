@@ -136,13 +136,19 @@
                                             <div class="dropdown-menu dropdown-menu-left">
                                                 {{--                                                                                                        edit--}}
                                                 @if(Qs::userIsTeamSA())
-                                                    <a href="{{ route('courses.edit', $c->id) }}"
-                                                       class="dropdown-item"><i class="icon-pencil"></i> Edit</a>
-                                                       <a id="{{ $c->id }}" onclick="confirmDelete(this.id)" href="#"
-                                                       class="dropdown-item"><i class="icon-trash"></i> Delete</a>
-                                                    <form method="post" id="item-delete-{{ $c->id }}"
-                                                          action="{{ route('courses.destroy', $c->id) }}"
-                                                          class="hidden">@csrf @method('delete')</form>
+                                                <a href="{{ route('courses.edit', $c->id) }}"
+                                                class="dropdown-item"><i class="icon-pencil"></i> Edit</a>
+                                                <a id="{{ $c->id }}" onclick="confirmDelete(this.id)" href="#"
+                                                class="dropdown-item"><i class="icon-trash"></i> Delete</a>
+                                                
+                                                <a href="{{'students/addtopic?id='.$c->id}}" class="dropdown-item"><i class="icon-trash"></i> Add Topic</a>
+                                                
+                                                
+                                                
+                                                
+                                                <form method="post" id="item-delete-{{ $c->id }}"
+                                                action="{{ route('courses.destroy', $c->id) }}"
+                                                class="hidden">@csrf @method('delete')</form>
                                                 @endif
                                                 {{--                                                                                                        Delete--}}
                                                 <!--@if(Qs::userIsSuperAdmin())-->

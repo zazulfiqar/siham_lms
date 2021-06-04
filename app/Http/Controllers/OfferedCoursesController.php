@@ -56,6 +56,38 @@ class OfferedCoursesController extends Controller
         //
     }
 
+    public function addtopic()
+    {
+
+    $id = $_GET['id'];
+
+    $topics = \DB::table('courses_study_plan')
+            ->where('course_id', $id)
+            ->get();
+     
+//     echo "<pre>";
+//      print_r($topics);  
+//      echo "</pre>";
+
+// exit();
+    return view('pages.support_team.courses.addcourses', compact('id','topics'));
+    // echo "wwww";
+    //
+    }
+
+public function addtopicsub(Request $request)
+{
+
+        $data = \DB::table('courses_study_plan')->insert([
+        'name' => $request->name,
+        'study_plan' => $request->content,
+        'course_id' => $request->courseid,
+        ]);
+
+        return redirect()->back();
+
+}
+
     /**
      * Show the form for editing the specified resource.
      *

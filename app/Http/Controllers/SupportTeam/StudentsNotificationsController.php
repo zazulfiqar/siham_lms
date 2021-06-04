@@ -77,7 +77,8 @@ class StudentsNotificationsController extends Controller
     public function edit($id)
     {
         $data['instructions'] = $this->announce->findStdNotification($id);
-        return view('pages.SATSPanel.studentsNotifications.edit', $data);
+
+        return view('pages.SATSPanel.studentsNotifications.edit', compact('data'));
     }
 
     /**

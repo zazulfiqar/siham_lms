@@ -9,23 +9,32 @@
         </div>
 
 {{--        {{dd($evaluate)}}--}}
+@php
 
+// echo "<pre>";
+// print_r($data['instructions']->id);
+// echo "<pre>";
+
+    
+ 
+    // exit();
+@endphp
 
         <div class="card-body">
             <div class="row">
                 <div class="col-md-6">
-                    <form class="" method="post" action="{{ route('std_updates.update', $updates->id) }}">
+                    <form class="" method="post" action="{{ route('std_updates.update', $data['instructions']->id) }}">
                         @csrf @method('PUT')
                         <div class="form-group row">
                             <label class="col-lg-3 col-form-label font-weight-semibold">Title <span class="text-danger">*</span></label>
                             <div class="col-lg-9">
-                                <input name="title" value="{{ $updates->title }}" required type="text" class="form-control" >
+                                <input name="title" value="{{ $data['instructions']->title }}" required type="text" class="form-control" >
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-lg-3 col-form-label font-weight-semibold">Details <span class="text-danger">*</span></label>
                             <div class="col-lg-9">
-                                <input name="details" value="{{ $updates->details }}" required type="text" class="form-control" >
+                                <input name="details" value="{{ $data['instructions']->details }}" required type="text" class="form-control" >
                             </div>
                         </div>
 
