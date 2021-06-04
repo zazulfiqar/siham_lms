@@ -9,77 +9,22 @@
         </div>
 
         <div class="card-body">
-            <ul class="nav nav-tabs nav-tabs-highlight">
-                <li class="nav-item"><a href="#all-classes" class="nav-link active" data-toggle="tab">RULES AND REGULATIONS FOR STUDENT
-                      </a></li>
-{{--                <li class="nav-item"><a href="#all-classes" class="nav-link active" data-toggle="tab">RULES REGAURDING ATTENDANCE--}}
-{{--                    </a></li>--}}
-{{--                <li class="nav-item"><a href="#new-class" class="nav-link" data-toggle="tab"><i class="icon-plus2"></i>--}}
-{{--                        Create New Policy</a></li>--}}
-            </ul>
 
-            <div class="tab-content">
-                <div class="tab-pane fade show active" id="all-classes">
 
-                    @foreach($policies as $policy)
-{{--                        {{dd($policy->id)}}--}}
+            <div class="row">
 
-                        <div>
-                            {{$policy->policy}}
 
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="card flex-row flex-wrap">
+                        <div class="card-footer w-100 text-muted">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>   Privacy Policy
                         </div>
-
-                    @endforeach
-
-                    {{--                    <table class="table datatable-button-html5-columns">--}}
-{{--                        <thead>--}}
-{{--                        <tr>--}}
-{{--                            <th>S/N</th>--}}
-{{--                            <th>Class Type</th>--}}
-{{--                            <th>Policy </th>--}}
-
-{{--                            <th>Action</th>--}}
-{{--                        </tr>--}}
-{{--                        </thead>--}}
-{{--                        <tbody>--}}
-
-{{--                        @foreach($policy as $p)--}}
-
-{{--                            <tr>--}}
-{{--                                <td>{{ $loop->iteration }}</td>--}}
-{{--                                <td>{{ $p->role_type }}</td>--}}
-{{--                                <td>{{ $p->policy }}</td>--}}
-
-{{--                                <td class="text-center">--}}
-{{--                                    <div class="list-icons">--}}
-{{--                                        <div class="dropdown">--}}
-{{--                                            <a href="#" class="list-icons-item" data-toggle="dropdown">--}}
-{{--                                                <i class="icon-menu9"></i>--}}
-{{--                                            </a>--}}
-
-{{--                                            <div class="dropdown-menu dropdown-menu-left">--}}
-{{--                                                @if(Qs::userIsTeamSA())--}}
-{{--                                                    Edit--}}
-{{--                                                    <a href="{{ route('policies.edit', $p->id) }}" class="dropdown-item"><i--}}
-{{--                                                            class="icon-pencil"></i> Edit</a>--}}
-{{--                                                @endif--}}
-{{--                                                @if(Qs::userIsSuperAdmin())--}}
-{{--                                                    Delete--}}
-{{--                                                    <a id="{{ $p->id }}" onclick="confirmDelete(this.id)" href="#"--}}
-{{--                                                       class="dropdown-item"><i class="icon-trash"></i> Delete</a>--}}
-{{--                                                    <form method="post" id="item-delete-{{ $p->id }}"--}}
-{{--                                                          action="{{ route('policies.destroy', $p->id) }}"--}}
-{{--                                                          class="hidden">@csrf @method('delete')</form>--}}
-{{--                                                @endif--}}
-
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </td>--}}
-{{--                            </tr>--}}
-{{--                        @endforeach--}}
-{{--                        </tbody>--}}
-{{--                    </table>--}}
+                        @foreach($policies as $policysingle)
+                            <div class="card-body">
+                                <p>{{  $policysingle->policy }}</p>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
 
                 <div class="tab-pane fade" id="new-class">

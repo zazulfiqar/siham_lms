@@ -13,69 +13,47 @@
                 @csrf
                 @method('post')
                 <?php $count=1; ?>
+                <form action="{{ route('students.surveyStore') }} "  method="POST">
+                    {{ csrf_field() }}
+                <?php
+                 $count=1;
+                ;?>
 
+                <div class="wrapper bg-white rounded">
+                    <div class="content">
+                        @foreach($survay as $sur)
+                        <input type="hidden" name="studentId" value="{{ Auth::user()->id }}">
+                        <input type="hidden" name="question_id[{{$count}}]" value="{{ $sur->id }}">
 
-            <div class="tab-content">
-                <div class="tab-pane fade show active" id="all-students">
+                        <p class="text-justify h5 pb-2 font-weight-bold"> {{ $loop->iteration }} {{ $sur->question }} </p>
+                        <div class="options py-3">
+                            <label class="rounded p-2 option"> Excellent
+                                 <input required type="radio"  name="answer[{{$count}}]" value="Excellent">
+                                <span class="crossmark"></span>
+                            </label>
 
-                        <table class="table datatable-button-html5-columns">
-                        <thead>
-                        <tr>
-                            <th>S/N</th>
-                            <th>Questions</th>
-                        </tr>
-                        </thead>
-                        <tbody>
+                            <label class="rounded p-2 option"> Good
+                                <input required type="radio" name="answer[{{$count}}]" value="Good">
+                                <span class="checkmark"></span>
+                            </label>
 
-                            <form action="{{ route('students.surveyStore') }} "  method="POST">
-                                {{ csrf_field() }}
-                            <?php
-                             $count=1;
-                            ;?>
-
-                               @foreach($survay as $sur)
-                            <tr>
-                                <td>{{ $loop->iteration }}</td>
-                                <td>{{ $sur->question }} {{ $loop->iteration }}
-                                    <table class="table datatable-button-html5-columns" >
-                                        <tr>{{ $loop->iteration }}
-                                            <input type="hidden" name="studentId" value="{{ Auth::user()->id }}">
-                                            <input type="hidden" name="question_id[{{$count}}]" value="{{ $sur->id }}">
-
-                                            <td>
-                                                <input required type="radio"  name="answer[{{$count}}]" value="Excellent">Excellent
-                                            </td>
-                                            <td>
-                                                <input required type="radio" name="answer[{{$count}}]" value="Good">Good
-                                            </td>
-                                            <td>
-                                                <input required type="radio" name="answer[{{$count}}]" value="Average">Average
-                                            </td>
-                                            <?php $count++; ?>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-
+                            <label class="rounded p-2 option"> Average
+                                <input required type="radio" name="answer[{{$count}}]" value="Average">
+                            </label>
+                            <?php $count++; ?>
+                        </div>
                         @endforeach
-                        </tbody>
-                    </table>
+                    </div>
+                    @if(!$survay->isEmpty())
+                    <input type="submit" class="btn btn-primary" value="Submit form">
+                    @else
+                    Empty Survey List
+                    @endif
 
-
-                <div class="text-right">
-                    <input type="submit" class="btn btn-primary" value="Submit form"> <i class="icon-paperplane ml-2"></i>
                 </div>
             </form>
         </div>
-     </div>
     </div>
-
-    </div>
-    </div>
-
-    </form>
-
-</form>
 @endsection
 
 
