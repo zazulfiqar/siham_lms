@@ -93,7 +93,7 @@ class StudentsUpdatesController extends Controller
         $data = $req->all();
 //        dd($data);
         $this->announce->updateStdUpdates($id, $data); // Update Student Notifications
-        return redirect()->route('std_updates.index');
+        return redirect()->back();
     }
 
 
