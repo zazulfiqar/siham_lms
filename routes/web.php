@@ -86,6 +86,8 @@ Route::group(['middleware' => 'auth'], function () {
             Route::get('/student_drop_a_complain', [ApplicationController::class, 'individual_drop_a_complain'])->name('individual_students.drop_a_complain');
             Route::get('/general_app', [ApplicationController::class, 'general_app'])->name('students.general_app');
             Route::get('/student_general_app', [ApplicationController::class, 'individual_general_app'])->name('individual_students.general_app');
+            Route::get('/addtopic', [OfferedCoursesController::class, 'addtopic'])->name('addtopic');
+            Route::post('/addtopicsub', [OfferedCoursesController::class, 'addtopicsub'])->name('addtopicsub');
         });
 
         Route::post('/general_app_store', [ApplicationController::class, 'general_app_store'])->name('students.general_app_store');
