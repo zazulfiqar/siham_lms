@@ -245,18 +245,18 @@
                     <!--</li>-->
 
                     {{--Manage Subjects--}}
-                    {{--                    <li class="nav-item nav-item-submenu ">--}}
-                    {{--                        <a href="#" class="nav-link"><i class="icon-pin"></i> <span>Subjects Management</span></a>--}}
-                    {{--                        <ul class="nav nav-group-sub" data-submenu-title="Manage Subjects">--}}
-                    {{--                            <li class="nav-item">--}}
-                    {{--                                <a href="{{ route('subjects.index') }}"--}}
-                    {{--                                   class="nav-link {{ in_array(Route::currentRouteName(), ['subjects.index','subjects.edit',]) ? 'active' : '' }}"><i></i>--}}
-                    {{--                                    <span>Subjects</span>--}}
-                    {{--                                </a>--}}
-                    {{--                            </li>--}}
-                    {{--                           --}}
-                    {{--                        </ul>--}}
-                    {{--                    </li>--}}
+                                        <li class="nav-item nav-item-submenu ">
+                                            <a href="#" class="nav-link"><i class="icon-pin"></i> <span>Subjects Management</span></a>
+                                       <ul class="nav nav-group-sub" data-submenu-title="Manage Subjects">
+                                              <li class="nav-item">
+                                                 <a href="{{ route('subjects.index') }}"
+                                                    class="nav-link {{ in_array(Route::currentRouteName(), ['subjects.index','subjects.edit',]) ? 'active' : '' }}"><i></i>
+                                                     <span>Subjects</span>
+                                                 </a>
+                                             </li>
+
+                                          </ul>
+                                   </li>
 
                     {{--                   Evaluation      --}}
 

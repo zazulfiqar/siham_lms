@@ -64,16 +64,15 @@ var App = function() {
         // If sidebar is resized by default
         if ($('body').hasClass('sidebar-xs')) {
             revertBottomMenus();
+        }
 
-        } else {
-            // Toggle min sidebar class
-            $('.sidebar-main-toggle').on('click', function(e) {
-                $('body').toggleClass('sidebar-xs').removeClass('sidebar-mobile-main');
-                revertBottomMenus();
-            });
+        // Toggle min sidebar class
+        $('.sidebar-main-toggle').on('click', function(e) {
+            e.preventDefault();
+
             $('body').toggleClass('sidebar-xs').removeClass('sidebar-mobile-main');
             revertBottomMenus();
-        }
+        });
     };
 
     // Toggle main sidebar

@@ -155,7 +155,7 @@
                                                 @if(Qs::userIsTeamSA())
                                                     <a href="{{ route('frontpricing.edit', $d->id) }}"
                                                        class="dropdown-item"><i class="icon-pencil"></i> Edit</a>
-                                                       <a id="{{ $s->id }}" onclick="confirmDelete(this.id)" href="#"
+                                                       <a id="{{ $d->id }}" onclick="confirmDelete(this.id)" href="#"
                                                        class="dropdown-item"><i class="icon-trash"></i> Delete</a>
                                                     <form method="post" id="item-delete-{{ $d->id }}"
                                                           action="{{ route('frontpricing.destroy', $d->id) }}"

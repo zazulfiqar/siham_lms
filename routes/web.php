@@ -75,7 +75,12 @@ Route::group(['middleware' => 'auth'], function () {
             Route::get('promotion/{fc?}/{fs?}/{tc?}/{ts?}', [PromotionController::class, 'promotion'])->name('students.promotion');
             Route::post('promote/{fc}/{fs}/{tc}/{ts}', [PromotionController::class, 'promote'])->name('students.promote');
             Route::get('/class_schedule', [ClassScheduleController::class, 'index'])->name('students.class_schedule');
+
             Route::get('/course_register', [CourseRegistrationController::class, 'index'])->name('students.course_register');
+            Route::post('/courcestudentDetails', [CourseRegistrationController::class, 'courcestudentDetails'])->name('students.courcestudentDetails');
+
+
+
             Route::get('/general_courses', [OfferedCoursesController::class, 'index'])->name('students.offered_courses');
             Route::get('/private_courses', [OfferedCoursesController::class, 'privateCourses'])->name('students.private_courses');
             Route::get('/course_register_store/{id}', [CourseRegistrationController::class, 'store'])->name('students.course_register.store');

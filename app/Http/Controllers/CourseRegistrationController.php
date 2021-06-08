@@ -103,4 +103,12 @@ class CourseRegistrationController extends Controller
     {
         //
     }
+
+    public function courcestudentDetails(Request $request)
+    {
+        return view('pages.support_team.courseRegistrations.courseDetails')->with('details',$request);
+    }
+
+
+
 }

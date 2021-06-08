@@ -13,7 +13,7 @@
                 <li class="nav-item"><a href="#new-section" class="nav-link active" data-toggle="tab">Create New Course
                         List</a></li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Manage Subjects Detail</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Manage Courses Detail</a>
                     <div class="dropdown-menu dropdown-menu-right">
                         @foreach($subjects as $s)
                             <a href="#c{{ $s->id }}" class="dropdown-item" data-toggle="tab">{{ $s->name }}</a>
@@ -32,7 +32,7 @@
 
                                 <div class="form-group row">
                                     <label for="my_class_id" class="col-lg-3 col-form-label font-weight-semibold">Select
-                                        Subject <span class="text-danger">*</span></label>
+                                        Course <span class="text-danger">*</span></label>
                                     <div class="col-lg-9">
                                         <select required data-placeholder="Select Class" class="form-control select"
                                                 name="course_id" id="my_class_id">
