@@ -1,0 +1,3009 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: 'Fonts Awesome';
+    src: url(../fonts/fontawesome-webfont.eot);
+    src: url(../fonts/fontawesome-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/fontawesome-webfont.woff) format("woff"), url(../fonts/fontawesome-webfont.ttf) format("truetype"), url(../fonts/fontawesome-webfont.svg#fontawesome-webfont) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+.socialIcons li a i {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    text-align: center;
+    padding: 6px 0;
+    border-radius: 50%;
+    color: #000;
+    transition: 1s all;
+    ;
+}
+
+.socialIcons li a i:hover {
+    transform: scale(1.2);
+}
+
+.selectBoxFront {
+    height: 50px !important;
+    border: 2px solid #000 !important;
+    border-radius: 50px !important;
+    box-shadow: none !important;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 26px;
+    color: #212121;
+    word-break: break-word;
+}
+
+.videPicsImg {
+    height: 400px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+a:focus {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #000;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+h1 {
+    font-size: 39px;
+    line-height: 45px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 45px;
+    margin: 0;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0;
+}
+
+h4 {
+    font-size: 22px;
+    line-height: 35px;
+    margin: 0;
+}
+
+h5 {
+    font-size: 20px;
+    line-height: 25px;
+    margin: 0;
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+}
+
+p {
+    font-size: 13px;
+    font-weight: 400;
+    color: #606060;
+    line-height: 24px;
+}
+
+a {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #000;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #000;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #000;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #000;
+}
+
+.no-margin {
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    margin: 0 auto;
+    display: table;
+    float: none;
+}
+
+.no-pad-left {
+    padding-left: 0;
+}
+
+.no-pad-right {
+    padding-right: 0;
+}
+
+.flexRow {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+}
+
+.flexCol {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    align-items: center;
+}
+
+.carousel-caption {
+    top: 160px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: start;
+    text-align: left;
+}
+
+.carousel-inner>.item>a>img,
+.carousel-inner>.item>img {
+    width: 100%;
+    -webkit-animation: zoom 20s;
+    -moz-animation: zoom 20s;
+    animation: zoom 20s;
+    height: 500px;
+}
+
+.carousel-control.right,
+.carousel-control.left {
+    background: none;
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+    top: initial;
+    top: 40%;
+    background: rgba(255, 255, 255, 0.1);
+    text-shadow: none;
+}
+
+.carousel-control.right:hover,
+.carousel-control.left:hover {
+    background: rgba(255, 27, 27, 0.6);
+    color: #fff;
+}
+
+.carousel-control.right .fa,
+.carousel-control.left .fa {
+    position: relative;
+    top: 12px;
+    font-size: 20px;
+    color: #fff;
+    opacity: 0.5;
+}
+
+.carousel-control.right {
+    right: 0px;
+}
+
+.carousel-control.left {
+    left: 0px;
+}
+
+.carousel-indicators {}
+
+.carousel-indicators li {
+    border: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    background: #d8d4cf;
+    width: 12px;
+    height: 12px;
+    margin: 0;
+}
+
+.carousel-indicators .active {
+    margin: 0;
+    background-color: #62000f;
+    width: 12px;
+    height: 12px;
+}
+
+.main_logo a {
+    padding: 0;
+    display: inline-block;
+}
+
+.menuSec {
+    text-align: right;
+}
+
+.menuSec ul {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menuSec ul li {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.menuSec li ul {
+    display: none;
+}
+
+.menuSec ul li a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 10px 8px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 19px;
+    border-radius: 4px;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menuSec ul li a:hover,
+.menuSec ul li a.active {
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    color: #fff;
+    background: #f41043;
+}
+
+.menuSec ul li a:hover:before,
+.menuSec ul li a.active:before {
+    opacity: 1;
+}
+
+.menuSec li:hover>ul,
+.menuSec li:hover>ul>li:hover>ul {
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    background-color: #ffffff;
+    left: -30px;
+    width: 200px;
+    text-align: left;
+    top: 55px;
+}
+
+.menuSec li:hover>ul>li:hover>ul {
+    left: 230px;
+    top: 0;
+}
+
+.menuSec li>ul>li>a {
+    border: none;
+    padding: 10px 20px;
+    color: #0060b4;
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 20px;
+    text-transform: capitalize;
+}
+
+.menuSec li>ul>li,
+.menuSec li>ul>li>a {
+    display: block;
+    margin: 0;
+}
+
+.menuSec li>ul>li>a:before,
+.menuSec li>ul>li>a:after {
+    display: none;
+}
+
+.menuSec li:hover li {
+    float: none;
+}
+
+.menuSec li:hover a {}
+
+.menuSec li:hover li a:hover {
+    background-color: #0060b4;
+    color: #fff;
+}
+
+.menuSec ul ul ul {
+    left: 100%;
+    top: 0;
+}
+
+.menuSec ul:before,
+.menuSec ul:after {
+    content: " ";
+    display: table;
+}
+
+.menuSec ul:after {
+    clear: both;
+}
+
+.menuSec li>ul>li:hover>ul {
+    left: 230px;
+    top: 0px;
+    width: 270px;
+}
+
+header {
+    position: relative;
+    width: 100%;
+}
+
+.main_header {
+    background: #1d1d1d;
+    width: 100%;
+    padding: 1% 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 333333;
+}
+
+.main_header.affix {
+    position: fixed;
+    background: #061c0f;
+    top: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    animation: slide-down 0.7s;
+    z-index: 999;
+}
+
+.main_header .container {
+    position: relative;
+    z-index: 1;
+}
+
+.main_header:after {
+    content: "";
+    background: #000;
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+
+.menuSec ul li:last-child a {}
+
+.nav_search input[type="text"] {
+    font-size: 15px;
+    line-height: 20px;
+    color: #000;
+    font-weight: 400;
+    height: 35px;
+    border-radius: 50px;
+    border: 0;
+    width: 100%;
+    outline: none;
+    padding: 3px 15px;
+}
+
+.nav_search button {
+    background: transparent;
+    border: 0;
+    position: absolute;
+    right: 4px;
+    top: 3px;
+}
+
+.nav_search {
+    position: relative;
+}
+
+header.affix-top {
+    background: #000;
+    padding: 2% 0;
+    position: fixed;
+    width: 100%;
+    z-index: 999999;
+}
+
+.btn_pink {
+    background-color: #F41043;
+    padding: 8px 22px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    transition: ease-in-out 0.6s;
+    font-weight: 500;
+}
+
+.nav_login {
+    text-align: right;
+}
+
+.btn_pink:hover {
+    background: #fff;
+    color: #f41043;
+    transform: scale(1.1);
+}
+
+.banner_section {
+    /* background-image: url(../images/banner.png); */
+    /* background-size: 100% 100%; */
+    /* background-repeat: no-repeat; */
+    /* background-position: top center; */
+    /* height: 100%; */
+    /* width: 100%; */
+    /* padding: 0; */
+}
+
+.banner_text h2 {
+    font-size: 60px;
+    line-height: 65px;
+    color: #F7F4F4;
+    font-weight: 700;
+    margin: 40px 0 30px;
+    display: block;
+}
+
+.banner_text ul li {
+    display: inline-block;
+    margin: 0 20px 0 0px;
+}
+
+.banner_text ul li a {
+    background: #fff;
+    padding: 30px 50px;
+    border-radius: 4px;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 400;
+    color: #000;
+}
+
+.banner_text ul {
+    display: block;
+    /* margin: 50px 0 0; */
+}
+
+.banner_text ul li:nth-child(2) a {
+    background: #000;
+    color: #fff;
+}
+
+.banner_text ul li:nth-child(3) a {
+    background: #2b2bbc;
+    color: #fff;
+}
+
+.video_boxImg {
+    position: relative;
+}
+
+.video_boxImgOverlay {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.video_boxText {
+    background: #ffffff;
+    width: 85%;
+    padding: 20px 20px 60px;
+    text-align: center;
+    color: #000000;
+    border-radius: 0px 4px;
+    position: absolute;
+    bottom: -90px;
+    left: 0;
+}
+
+.video_box {
+    position: relative;
+}
+
+.video_boxText p {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #000;
+    margin: 0;
+}
+
+.video_boxImg>img {
+    border-radius: 4px;
+    width: 100%;
+}
+
+.video_section {
+    padding: 0% 0 15%;
+    margin: 14% 0 0;
+}
+
+.body_bg {
+    background: linear-gradient(to right, #f41043 10%, #ee82ef 90%);
+}
+
+.btn_pink2 {
+    background: #f41043;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 4px;
+    transition: ease-in-out 0.6s;
+}
+
+.btn_pink2:hover {
+    background: #fff;
+    color: #f41043;
+    box-shadow: 1px 1px 14px #f41043;
+}
+
+.video_boxText a {
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: max-content;
+    height: 55px;
+}
+
+.startLearning_head h2 {
+    font-size: 32px;
+    line-height: 37px;
+    font-weight: 600;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.startLearning_head p {
+    font-size: 16px;
+    line-height: 30px;
+    color: #fff;
+    font-weight: 500;
+    width: 65%;
+    margin: 30px auto 40px;
+}
+
+.startLearning_head ul li {
+    display: inline-block;
+}
+
+.startLearning_head ul li a {
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 500;
+    color: #fff;
+    background: transparent;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+
+.startLearning_head ul li a:hover {
+    background: #000;
+}
+
+.startLearning_head ul li.active a {
+    background: #000;
+}
+
+.startLearning_head {
+    text-align: center;
+    margin: 0 0 50px;
+}
+
+.startLearning_section {
+    padding: 7% 0;
+    border-bottom: 1px solid rgb(255 255 255 / 48%);
+    overflow: hidden;
+    background: linear-gradient(to right, #f41043 10%, #ee82ef 90%);
+}
+
+.learnBoxText {
+    width: 100%;
+    background: rgb(0 0 0 / 48%);
+    position: absolute;
+    bottom: -190px;
+    left: 0px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    border-radius: 4px;
+    padding: 12px;
+    transition: ease-in-out 0.6s;
+}
+
+.learnBoxImg img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.learnBox {
+    position: relative;
+    overflow: hidden;
+}
+
+.learnBox:hover .learnBoxText {
+    bottom: 0;
+}
+
+.learnBoxText a {
+    font-size: 15px;
+    color: #fff;
+    line-height: 20px;
+    margin: 0 0 10px;
+}
+
+.learnBoxText a img {
+    margin: 0 0 0 8px;
+}
+
+.learnBoxText h5 {
+    font-size: 15px;
+    line-height: 21px;
+    color: #fff;
+}
+
+.WatchAnyTime_section {
+    padding: 7% 0;
+    border-bottom: 1px solid rgb(255 255 255 / 48%);
+    overflow: hidden;
+}
+
+.WatchAnyTime_Box h4 {
+    font-size: 22px;
+    line-height: 27px;
+    color: #fff;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.WatchAnyTime_Box p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 500;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.WatchAnyTime_Box {
+    background: rgb(0 0 0 / 38%);
+    padding: 50px 0px;
+    text-align: center;
+    border-radius: 4px;
+    height: 310px;
+}
+
+.WatchAnyTime_btn a span {
+    display: block;
+}
+
+.WatchAnyTime_btn a {
+    width: max-content;
+}
+
+.WatchAnyTime_btn {
+    text-align: center;
+    margin: 50px auto 0;
+}
+
+.WatchAnyTime_btn a {
+    color: #fff;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 500;
+}
+
+.WatchAnyTime_btn a span {
+    font-size: 12px;
+    line-height: 17px;
+}
+
+.Pricing_section {
+    padding: 7% 0 18%;
+    border-bottom: 1px solid rgb(255 255 255 / 48%);
+    overflow: hidden;
+}
+
+.Pricing_Box {
+    padding: 50px 30px;
+    background: #fff;
+    width: 90%;
+    border-radius: 4px;
+    position: relative;
+    z-index: 2;
+    height: 520px;
+    left: 0;
+}
+
+.Pricing_Box h3 {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 700;
+}
+
+.Pricing_Box span {
+    font-size: 45px;
+    line-height: 50px;
+    font-weight: 700;
+    margin: 20px 0 20px;
+    display: block;
+}
+
+.Pricing_Box p {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.Pricing_Box hr {
+    margin: 30px 20px;
+    border-bottom: 2px solid #BFBFBF;
+}
+
+.Pricing_Box ul li {
+    font-size: 16px;
+    line-height: 35px;
+    font-weight: 400;
+    color: #333;
+    position: relative;
+    padding: 0 0 0 24px;
+}
+
+.Pricing_Box ul li:after {
+    content: "";
+    background: #f41043;
+    position: absolute;
+    left: 0;
+    top: 13px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+}
+
+.Pricing_Box2 {
+    background: #000;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 90%;
+    height: 590px;
+    border-radius: 4px;
+    z-index: -1;
+}
+
+.Pricing_Box2 a {
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.6px;
+    font-family: 'Fira Sans', sans-serif;
+    position: absolute;
+    bottom: 28px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    width: 45%;
+}
+
+.Pricing_Box2 a span {
+    display: block;
+}
+
+.Saying_section {
+    padding: 7% 0;
+    border-bottom: 1px solid rgb(255 255 255 / 48%);
+    overflow: hidden;
+}
+
+.Saying_box {}
+
+.Saying_box img {
+    border-radius: 50px;
+    display: table;
+    margin: 0 auto;
+}
+
+.Saying_box h4 {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #F41043;
+    margin: 10px 0 0;
+}
+
+.Saying_box span {
+    font-size: 12px;
+    line-height: 17px;
+    font-weight: 600;
+    color: rgb(0 0 0 / 35%);
+    margin: 5px 0;
+    display: block;
+}
+
+.Saying_box p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #01062E;
+    font-weight: 400;
+    margin: 0;
+}
+
+.Saying_box {
+    text-align: center;
+    border-radius: 4px;
+    transition: ease-in-out 0.6s;
+    margin: 30px 5px;
+    background: #fff;
+    padding: 40px 30px;
+    height: 330px;
+}
+
+.Saying_box:hover {
+    transform: scale(1.1);
+}
+
+.Saying_section .slick-next,
+.Saying_section .slick-prev {
+    background: transparent;
+}
+
+.Blog_section .slick-next,
+.Blog_section .slick-prev {
+    background: transparent;
+}
+
+.Blog_section {
+    padding: 7% 0;
+    border-bottom: 1px solid rgb(255 255 255 / 48%);
+    overflow: hidden;
+}
+
+.blog_Box {
+    background: #fff;
+    border-radius: 4px;
+    padding: 160px 20px 30px;
+    position: relative;
+    margin: 40px 0 0px;
+}
+
+.blog_Box p {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #000;
+    margin: 0 0;
+    height: 220px;
+}
+
+.blog_Box a {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #000;
+    margin: 80px 0 0;
+    display: block;
+    transition: ease-in-out 0.5s;
+}
+
+.blog_BoxOverlay {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    background: #000;
+    width: 90%;
+    border-radius: 4px 4px 4px 0px;
+    box-shadow: 1px 1px 10px rgb(0 0 0 / 45%);
+    height: 140px;
+}
+
+.blog_BoxOverlay p {
+    font-size: 16px;
+    line-height: 27px;
+    color: #fff;
+    padding: 20px;
+}
+
+.slick-slide {
+    outline: none;
+}
+
+.accordion_container {
+    /* width: 500px; */
+}
+
+.accordion_head {
+    background-color: rgb(0 0 0 / 68%);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    padding: 17px 15px;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.accordion_body {
+    background: #fff;
+    padding: 17px 15px;
+    border-radius: 4px;
+    margin: 0 0 10px 0;
+}
+
+.accordion_body p {
+    padding: 18px 5px;
+    margin: 0px;
+    font-size: 15px;
+    line-height: 26px;
+    color: #000;
+}
+
+.plusminus {
+    float: right;
+}
+
+.faq_section {
+    padding: 7% 0;
+    overflow: hidden;
+}
+
+.faq_section .panel-default>.panel-heading {
+    color: #ffff;
+    background-color: #764076;
+    border-color: transparent;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 4px;
+}
+
+.faq_section .panel-default>.panel-heading a {
+    display: block;
+    padding: 20px 15px;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 500;
+}
+
+.faq_section .panel-default>.panel-heading a:after {
+    content: "";
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    float: right;
+    transition: transform .25s linear;
+    -webkit-transition: -webkit-transform .25s linear;
+}
+
+.faq_section .panel-default>.panel-heading a[aria-expanded="true"] {
+    background-color: #764076;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.faq_section .panel-default>.panel-heading a[aria-expanded="true"]:after {
+    content: "\f106";
+    font-family: 'FontAwesome';
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    font-size: 28px;
+    line-height: 33px;
+}
+
+.faq_section .panel-default>.panel-heading a[aria-expanded="false"]:after {
+    content: "\f107";
+    font-family: 'FontAwesome';
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    font-size: 28px;
+    line-height: 33px;
+}
+
+.faq_section .accordion-option {
+    width: 100%;
+    float: left;
+    clear: both;
+    margin: 15px 0;
+}
+
+.faq_section .accordion-option .title {
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+.faq_section .accordion-option .toggle-accordion {
+    float: right;
+    font-size: 16px;
+    color: #6a6c6f;
+}
+
+.faq_section .accordion-option .toggle-accordion:before {
+    content: "Expand All";
+}
+
+.faq_section .accordion-option .toggle-accordion.active:before {
+    content: "Collapse All";
+}
+
+.faq_section .panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border-top-color: transparent;
+}
+
+.faq_section .panel-group .panel {
+    border: 0!important;
+}
+
+footer {
+    background: #000;
+    padding: 0;
+}
+
+.footerText {
+    text-align: center;
+    padding: 10% 0;
+}
+
+.footerText h4 {
+    font-size: 35px;
+    line-height: 40px;
+    color: #fff;
+    font-weight: 700;
+    margin: 0 0 20px;
+}
+
+.footerText p {
+    font-size: 18px;
+    line-height: 23px;
+    color: #6C8593;
+    font-weight: 500;
+    margin: 30px 0 60px;
+}
+
+.footerText p>a {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 400;
+}
+
+.footerText a {
+    font-size: 45px;
+    line-height: 50px;
+    color: #fff;
+    font-weight: 700;
+    margin: 0 0 20px;
+}
+
+.copyRight p {
+    font-size: 16px;
+    line-height: 21px;
+    color: #fff;
+    font-weight: 400;
+    padding: 25px 0;
+    margin: 0;
+}
+
+.copyRight {
+    border-top: 1px solid #fff;
+}
+
+
+/*login_css_start*/
+
+.login_popup {
+    position: relative;
+    z-index: 999999;
+}
+
+.login_popup .modal-body {
+    background: #fff;
+    padding: 30px 50px;
+    border-radius: 20px;
+}
+
+.login_popupForm input[type="email"],
+.login_popupForm input[type="text"],
+.login_popupForm input[type="password"] {
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid #000;
+    margin: 0 0 20px;
+    background: transparent;
+    outline: none;
+    padding: 3px 15px;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.login_popupForm input[type="submit"] {
+    background-color: #000;
+    padding: 12px 0;
+    border-radius: 25px;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 5px;
+    font-size: 20px;
+    font-family: 'Fira Sans', sans-serif;
+    border: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    height: 55px;
+    transition: ease-in-out 0.6s;
+}
+
+.login_popupForm h2 {
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    margin: 0 0 10px;
+    font-weight: 700;
+    color: #000;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.login_popup button.close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: #000;
+    opacity: 1;
+    text-shadow: none;
+    color: #fff;
+    height: 35px;
+    width: 35px;
+    border-radius: 50px;
+    outline: none;
+}
+
+.login_popupForm p {
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    margin: 0 0 30px;
+    color: #000;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.forget_div {
+    text-align: right;
+    margin: 0 0 20px;
+}
+
+.forget_div a {
+    text-decoration: underline;
+    font-size: 16px;
+    color: #000;
+    line-height: 21px;
+    font-weight: 600;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.popup_logo {
+    display: table;
+    margin: 0 auto 20px;
+}
+
+.Remeber_div label {
+    font-size: 16px;
+    color: #000;
+    line-height: 21px;
+    font-weight: 600;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.login_popup .modal-content {
+    border-radius: 20px;
+}
+
+.login_popup button.close:hover {
+    background: #f41043;
+    color: #fff;
+}
+
+.login_popupForm input[type="submit"]:hover {
+    background: #f41043;
+}
+
+.login_popupForm ::-webkit-input-placeholder {
+    /* Edge */
+    color: #000;
+}
+
+.login_popupForm :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #000;
+}
+
+.login_popupForm ::placeholder {
+    color: #000;
+}
+
+.popup_logo img {
+    width: 50%;
+    margin: 0 auto 0;
+    display: table;
+}
+
+.already_text span {
+    font-size: 16px;
+    line-height: 26px;
+    margin: 20px 0 0px;
+    color: #000;
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+    display: block;
+}
+
+.already_text span a {
+    margin: 0;
+    color: #f41043;
+}
+
+body.bg_none {
+    background-image: none!important;
+    min-height: auto!important;
+}
+
+.register_section {
+    padding: 6% 0 6%;
+}
+
+.register_section .login_popup {
+    position: relative;
+    z-index: 0;
+}
+
+.center {
+    float: none;
+    display: table;
+    margin: 0 auto;
+}
+
+
+/*login_css_start*/
+
+.blog_Box a:hover {
+    color: #f41043;
+}
+
+
+/*Inner_Pages_css_start*/
+
+.innerBannerOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    background: rgb(29 29 29 / 55%);
+}
+
+.innerBannerOverlay h1 {
+    line-height: 50px;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 300;
+}
+
+.innerpages .startLearning_head h2,
+.innerpages .startLearning_head p {
+    color: #fff;
+    text-align: center;
+}
+
+.subjctListBox {
+    padding: 20px 10px;
+    background: #fff;
+    border-radius: 10px;
+    margin: 0 0 30px;
+}
+
+.subjctListBox h2 {
+    font-size: 20px;
+    line-height: 25px;
+    margin: 0 0 40px;
+    border-bottom: 2px solid #1d1d1d;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+    color: #fff;
+}
+
+.subject-list {
+    color: #333;
+    font-size: 16px;
+    line-height: 32px;
+    height: 250px;
+}
+
+.subject-list li {
+    position: relative;
+    padding: 0 0 0 20px;
+}
+
+.subject-list li:after {
+    content: "";
+    background: #f41043;
+    position: absolute;
+    left: 0;
+    top: 12px;
+    height: 7px;
+    width: 7px;
+    border-radius: 50px;
+}
+
+.scrollbar {
+    overflow-y: scroll;
+    margin-bottom: 25px;
+}
+
+#scrolWrapper {
+    margin: auto;
+}
+
+
+/*
+ *  STYLE 2
+ */
+
+#style-2::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+#style-2::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent;
+}
+
+#style-2::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #1d1d1d;
+}
+
+.padding_both {
+    padding: 6% 0;
+}
+
+.startLearning_section.padding_both {
+    border: 0;
+}
+
+.subjctListBox h2:after {
+    content: "";
+    background: #1d1d1d;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 50px;
+    width: 50%;
+    z-index: -1;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.centerCol {
+    float: none;
+    display: table;
+    margin: 0 auto;
+}
+
+.innerBanner {
+    position: relative;
+}
+
+.innerBanner img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.Inner_header .main_header {
+    position: inherit;
+}
+
+.Pricing_page {
+    padding: 6% 0 4%;
+}
+
+.Pricing_page .Pricing_Box {
+    margin: 0 0 160px;
+}
+
+.contact_map iframe {
+    width: 100%;
+    border: 0;
+    height: 450px;
+}
+
+.contact_inner {
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 20px;
+    margin: -90px 0 0;
+    position: relative;
+    z-index: 3;
+    padding: 60px 60px;
+    box-shadow: 2px 2px 20px rgb(51 51 51 / 60%);
+}
+
+.contact_page {
+    padding: 0 0 7%;
+}
+
+.contact_pageForm label {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 500;
+    color: #1d1d1d;
+    display: block;
+    margin: 0 0 10px;
+}
+
+.contact_pageForm label span {
+    color: #f41043;
+}
+
+.contact_pageForm input[type="text"],
+.contact_pageForm input[type="email"],
+.contact_pageForm input[type="tel"],
+.contact_pageForm input[type="url"],
+.contact_pageForm textarea {
+    width: 100%;
+    height: 50px;
+    margin: 0 0 20px;
+    border-radius: 50px;
+    border: 1px solid #1d1d1d;
+    color: #1d1d1d;
+    outline: none;
+    padding: 3px 15px;
+}
+
+.contact_pageForm input[type="submit"] {
+    background: #f41043;
+    border: 0;
+    color: #fff;
+    text-transform: uppercase;
+    width: 100%;
+    height: 55px;
+    font-size: 20px;
+    line-height: 25px;
+    border-radius: 50px;
+}
+
+.contact_pageForm textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contact_infoBoxIcon {
+    float: left;
+    width: 24%;
+}
+
+.contact_infoBoxText {
+    float: left;
+    width: 67%;
+    margin: 14px 0px 0px 20px;
+}
+
+.contact_infoBoxIcon span {
+    background: #F41043;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border-radius: 0;
+    color: #fff;
+}
+
+.contact_infoBox {
+    display: block;
+    margin: 30px 0 0;
+}
+
+.contact_infoBoxText h4 {
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 500;
+    margin: 0 0 5px;
+    color: #1d1d1d;
+}
+
+.contact_infoBoxText p,
+.contact_infoBoxText a {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 500;
+    margin: 0;
+    color: #1d1d1d;
+    display: block;
+}
+
+.contact_head h2 {
+    font-size: 30px;
+    line-height: 35px;
+    color: #1d1d1d;
+    margin: 0 0 0px;
+}
+
+.contact_info {
+    padding: 20px;
+    border: 1px solid rgb(29 29 29 / 32%);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.register_section .login_popup {
+    background: #fff;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+
+/*BlogDetail_page_start*/
+
+.BlogDetail_page {
+    padding: 7% 0;
+    border-bottom: 1px solid rgb(255 255 255 / 48%);
+    overflow: hidden;
+}
+
+.BlogDetail_text img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.BlogDetail_text h2 {
+    font-size: 35px;
+    line-height: 40px;
+    margin: 20px 0 20px;
+    color: #fff;
+}
+
+.BlogDetail_text ul li {
+    display: inline-block;
+    margin: 0 20px 0 0px;
+}
+
+.BlogDetail_text ul li a {
+    font-size: 15px;
+    line-height: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.BlogDetail_text ul li a i {
+    color: #fff;
+    font-size: 20px;
+    line-height: 25px;
+    margin: 0 7px 0 0px;
+}
+
+.BlogDetail_text p {
+    font-size: 15px;
+    list-style: 30px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.BlogDetail_text ul {
+    margin: 0 0 20px;
+}
+
+.commentBox {
+    position: relative;
+    padding: 27px 27px 27px 124px;
+    margin: 30px 0 0;
+    overflow: hidden;
+    border-top: 2px solid #fff;
+}
+
+.commentBox>img {
+    width: 101px;
+    height: 101px;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 30px;
+}
+
+.commentBox .fa-reply {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    color: #fff;
+}
+
+.commentInner {
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.commentInner i {
+    color: #fff;
+    font-weight: 700;
+}
+
+.commentBox:hover {
+    border-left-color: #2279c5;
+}
+
+.commentBox p {
+    font-size: 14px;
+    line-height: 28px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.commentBoxMain {
+    padding: 5% 0 0;
+}
+
+.commentBoxMain h3 {
+    font-size: 30px;
+    line-height: 35px;
+    color: #ffff;
+    font-weight: 500;
+}
+
+.commentInner .badge {
+    background: #fff;
+    color: #000;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 17px;
+}
+
+.leave_formMian h3 {
+    font-size: 30px;
+    line-height: 35px;
+    color: #ffff;
+    font-weight: 500;
+}
+
+.leave_formBox {
+    padding: 3% 0 0;
+}
+
+.leave_formMian {
+    padding: 4% 0 0;
+}
+
+.leave_formBox input[type="text"],
+.leave_formBox input[type="email"],
+.leave_formBox textarea {
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #fff;
+    padding: 3px 15px;
+    color: #fff;
+    outline: none;
+    margin: 0 0 20px;
+}
+
+.leave_formBox textarea {
+    height: 150px;
+    resize: none;
+    padding-top: 15px;
+}
+
+.leave_formBox button {
+    background: #000;
+    width: 100%;
+    height: 45px;
+    border: 0;
+    color: #fff;
+    font-size: 18px;
+    line-height: 23px;
+    outline: none;
+}
+
+.tutor_box h4 {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #F41043;
+    margin: 10px 0 0;
+}
+
+.tutor_box span {
+    font-size: 12px;
+    line-height: 17px;
+    font-weight: 600;
+    color: rgb(0 0 0 / 35%);
+    margin: 5px 0;
+    display: block;
+}
+
+.tutor_box p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #01062E;
+    font-weight: 400;
+    margin: 0;
+}
+
+.tutor_boxText {
+    text-align: center;
+    border-radius: 8px;
+    transition: ease-in-out 0.6s;
+    margin: -20px 0px 30px;
+    background: #fff;
+    padding: 20px 30px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+}
+
+.fronttutor_box {
+    text-align: center;
+    border-radius: 8px;
+    transition: ease-in-out 0.6s;
+    margin: -20px 0px 30px;
+    background: #fff;
+    /* padding: 20px 30px; */
+    height: 383px;
+    /* display: inline-block; */
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+}
+
+.tutor_boxText:hover tutor_boxImg img {
+    transform: scale(1.3);
+}
+
+.tutor_boxImg {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.tutor_boxImg img {
+    width: 100%;
+    border-radius: 8px;
+    min-height: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: ease-in-out 0.6s;
+}
+
+.tutor_boxImg:hover img {
+    transform: scale(1.3);
+}
+
+.online_classes {
+    padding: 7% 0 14%;
+}
+
+
+/*3/1/2021_css_end*/
+
+
+/*BlogDetail_page_end*/
+
+@media only screen and (min-width: 967px) and (max-width: 1200px) {
+    .slicknav_menu {
+        display: block;
+    }
+    .main_header {
+        position: initial;
+        padding: 2% 0;
+    }
+    .flexRow {
+        display: block;
+    }
+    .nav_search {
+        position: relative;
+        margin: 0;
+    }
+    .nav_login {
+        text-align: right;
+        margin: 0;
+    }
+    .video_section {
+        padding: 10% 0;
+        margin: 0;
+    }
+    .banner_text h2 {
+        font-size: 30px;
+        line-height: 35px;
+        margin: 20px 0 20px;
+    }
+    .carousel-caption {
+        top: 0;
+        align-items: center;
+    }
+    .banner_text ul {
+        display: block;
+        margin: 0px 0 0;
+    }
+    .banner_text ul li {
+        margin: 0 0px 0 0px;
+        display: inline-block;
+    }
+    .banner_text ul li a {
+        padding: 10px 20px;
+        font-size: 16px;
+        line-height: 21px;
+        width: max-content;
+        display: inline-block;
+        margin: 0 0 5px;
+    }
+    .banner_text>img {
+        width: 25%;
+    }
+    .video_box {
+        margin: 0 0 160px;
+    }
+    .video_boxText p {
+        font-size: 13px;
+        line-height: 21px;
+        height: 100px;
+    }
+    .video_boxText a {
+        width: 145px;
+        height: 45px;
+    }
+    .btn_pink2 {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .video_boxText {
+        width: 90%;
+        padding: 10px 10px 20px;
+        bottom: -90px;
+    }
+    .video_box {
+        margin: 0 0 100px;
+    }
+    .startLearning_head h2 {
+        font-size: 22px;
+        line-height: 27px;
+    }
+    .startLearning_head p {
+        font-size: 13px;
+        line-height: 22px;
+        width: 100%;
+        margin: 10px auto 20px;
+    }
+    .startLearning_head ul li a {
+        font-size: 14px;
+        line-height: 45px;
+        padding: 10px 12px;
+    }
+    .startLearning_head {
+        margin: 0 0 20px;
+    }
+    .learnBox {
+        margin: 0 0 10px;
+    }
+    .learnBoxText {
+        bottom: -330px;
+    }
+    .WatchAnyTime_Box h4 {
+        font-size: 16px;
+        line-height: 21px;
+        margin: 10px 0;
+    }
+    .WatchAnyTime_Box {
+        padding: 20px 0px;
+        height: 230px;
+        margin: 0 0 20px;
+    }
+    .WatchAnyTime_Box p {
+        font-size: 12px;
+        line-height: 17px;
+        width: 85%;
+        margin: 0 auto;
+    }
+    .WatchAnyTime_btn {
+        margin: 0px 0 0;
+    }
+    .Pricing_Box {
+        padding: 15px 10px;
+        width: 90%;
+        height: auto;
+        margin: 0 0 20px;
+    }
+    .Pricing_Box2 a {
+        font-size: 14px;
+        line-height: 19px;
+        bottom: 20px;
+    }
+    .Pricing_Box2 {
+        top: 30px;
+        right: 20px;
+        width: 85%;
+        height: 390px;
+    }
+    .Pricing_Box {
+        padding: 15px 10px;
+        width: 90%;
+        height: 345px;
+        margin: 0 0 100px;
+    }
+    .Pricing_Box h3 {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .Pricing_Box span {
+        font-size: 30px;
+        line-height: 35px;
+        margin: 10px 0 10px;
+    }
+    .Pricing_Box p {
+        font-size: 12px;
+        line-height: 22px;
+    }
+    .Pricing_Box ul li {
+        font-size: 12px;
+        line-height: 25px;
+        padding: 0 0 0 24px;
+    }
+    .Pricing_Box ul li:after {
+        top: 9px;
+        height: 8px;
+        width: 8px;
+    }
+    .Pricing_Box hr {
+        margin: 20px 20px;
+    }
+    .Saying_box {
+        margin: 10px 5px;
+        padding: 15px 10px;
+        height: 305px;
+    }
+    .Pricing_section {
+        padding: 7% 0 7%;
+    }
+    .blog_BoxOverlay p {
+        font-size: 13px;
+        line-height: 22px;
+        padding: 15px;
+    }
+    .blog_BoxOverlay {
+        top: -30px;
+        height: 100px;
+    }
+    .blog_Box p {
+        font-size: 12px;
+        line-height: 20px;
+        height: 160px;
+    }
+    .blog_Box {
+        padding: 85px 15px 20px;
+        margin: 40px 0 0px;
+    }
+    .faq_section .panel-default>.panel-heading a {
+        padding: 15px 5px;
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .faq_section .panel-default>.panel-heading a[aria-expanded="true"]:after {
+        font-size: 20px;
+        line-height: 14px;
+    }
+    .faq_section .panel-default>.panel-heading a[aria-expanded="false"]:after {
+        font-size: 20px;
+        line-height: 19px;
+    }
+    .footerText h4 {
+        font-size: 18px;
+        line-height: 23px;
+        margin: 0 0 10px;
+    }
+    .footerText p {
+        font-size: 14px;
+        line-height: 19px;
+        margin: 10px 0 20px;
+    }
+    .footerText a {
+        font-size: 25px;
+        line-height: 30px;
+        margin: 0 0 10px;
+    }
+    .copyRight p {
+        font-size: 12px;
+        line-height: 17px;
+        padding: 15px 0;
+    }
+    .footerText p>a {
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .faq_section .panel-default>.panel-heading+.panel-collapse>.panel-body {
+        font-size: 13px;
+        line-height: 22px;
+        padding: 0px 5px 20px;
+    }
+    .login_popup .modal-body {
+        padding: 10px 10px;
+    }
+    .login_popupForm h2 {
+        font-size: 20px;
+        line-height: 25px;
+        margin: 0 0 10px;
+    }
+    .login_popupForm p {
+        font-size: 13px;
+        line-height: 21px;
+        margin: 0 0 20px;
+    }
+    .login_popupForm input[type="email"],
+    .login_popupForm input[type="text"],
+    .login_popupForm input[type="password"] {
+        width: 100%;
+        height: 40px;
+        margin: 0 0 10px;
+        padding: 3px 15px;
+        font-size: 12px;
+    }
+    .Remeber_div label {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .forget_div a {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .login_popupForm input[type="submit"] {
+        padding: 8px 0;
+        font-size: 14px;
+        margin: 0;
+        height: 40px;
+    }
+    .already_text span {
+        font-size: 12px;
+        line-height: 20px;
+        margin: 10px 0 10px;
+    }
+    .WatchAnyTime_btn a span {
+        font-size: 11px;
+        line-height: 16px;
+    }
+    .WatchAnyTime_btn a {
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .Saying_box p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 966px) {
+    .Saying_box p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .slicknav_menu {
+        display: block;
+    }
+    .main_header {
+        position: initial;
+        padding: 2% 0;
+    }
+    .flexRow {
+        display: block;
+    }
+    .nav_search {
+        position: relative;
+        margin: 0;
+    }
+    .nav_login {
+        text-align: right;
+        margin: 0;
+    }
+    .video_section {
+        padding: 10% 0;
+        margin: 0;
+    }
+    .banner_text h2 {
+        font-size: 30px;
+        line-height: 35px;
+        margin: 20px 0 20px;
+    }
+    .carousel-caption {
+        top: 0;
+        align-items: center;
+    }
+    .banner_text ul {
+        display: block;
+        margin: 0px 0 0;
+    }
+    .banner_text ul li {
+        margin: 0 0px 0 0px;
+        display: inline-block;
+    }
+    .banner_text ul li a {
+        padding: 10px 20px;
+        font-size: 16px;
+        line-height: 21px;
+        width: max-content;
+        display: inline-block;
+        margin: 0 0 5px;
+    }
+    .banner_text>img {
+        width: 25%;
+    }
+    .video_box {
+        margin: 0 0 160px;
+    }
+    .video_boxText p {
+        font-size: 13px;
+        line-height: 21px;
+        height: 100px;
+    }
+    .video_boxText a {
+        width: 145px;
+        height: 45px;
+    }
+    .btn_pink2 {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .video_boxText {
+        width: 90%;
+        padding: 10px 10px 20px;
+        bottom: -90px;
+    }
+    .video_box {
+        margin: 0 0 100px;
+    }
+    .startLearning_head h2 {
+        font-size: 22px;
+        line-height: 27px;
+    }
+    .startLearning_head p {
+        font-size: 13px;
+        line-height: 22px;
+        width: 100%;
+        margin: 10px auto 20px;
+    }
+    .startLearning_head ul li a {
+        font-size: 14px;
+        line-height: 45px;
+        padding: 10px 12px;
+    }
+    .startLearning_head {
+        margin: 0 0 20px;
+    }
+    .learnBox {
+        margin: 0 0 10px;
+    }
+    .learnBoxText {
+        bottom: -330px;
+    }
+    .WatchAnyTime_Box h4 {
+        font-size: 16px;
+        line-height: 21px;
+        margin: 10px 0;
+    }
+    .WatchAnyTime_Box {
+        padding: 20px 0px;
+        height: 230px;
+        margin: 0 0 20px;
+    }
+    .WatchAnyTime_Box p {
+        font-size: 12px;
+        line-height: 17px;
+        width: 85%;
+        margin: 0 auto;
+    }
+    .WatchAnyTime_btn {
+        margin: 0px 0 0;
+    }
+    .Pricing_Box {
+        padding: 15px 10px;
+        width: 90%;
+        height: auto;
+        margin: 0 0 20px;
+    }
+    .Pricing_Box2 a {
+        font-size: 14px;
+        line-height: 19px;
+        bottom: 20px;
+    }
+    .Pricing_Box2 {
+        top: 30px;
+        right: 20px;
+        width: 85%;
+        height: 390px;
+    }
+    .Pricing_Box {
+        padding: 15px 10px;
+        width: 90%;
+        height: 345px;
+        margin: 0 0 100px;
+    }
+    .Pricing_Box h3 {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .Pricing_Box span {
+        font-size: 30px;
+        line-height: 35px;
+        margin: 10px 0 10px;
+    }
+    .Pricing_Box p {
+        font-size: 12px;
+        line-height: 22px;
+    }
+    .Pricing_Box ul li {
+        font-size: 12px;
+        line-height: 25px;
+        padding: 0 0 0 24px;
+    }
+    .Pricing_Box ul li:after {
+        top: 9px;
+        height: 8px;
+        width: 8px;
+    }
+    .Pricing_Box hr {
+        margin: 20px 20px;
+    }
+    .Saying_box {
+        margin: 10px 5px;
+        padding: 15px 10px;
+        height: 305px;
+    }
+    .Pricing_section {
+        padding: 7% 0 7%;
+    }
+    .blog_BoxOverlay p {
+        font-size: 13px;
+        line-height: 22px;
+        padding: 15px;
+    }
+    .blog_BoxOverlay {
+        top: -30px;
+        height: 100px;
+    }
+    .blog_Box p {
+        font-size: 12px;
+        line-height: 20px;
+        height: 160px;
+    }
+    .blog_Box {
+        padding: 85px 15px 20px;
+        margin: 40px 0 0px;
+    }
+    .faq_section .panel-default>.panel-heading a {
+        padding: 15px 5px;
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .faq_section .panel-default>.panel-heading a[aria-expanded="true"]:after {
+        font-size: 20px;
+        line-height: 14px;
+    }
+    .faq_section .panel-default>.panel-heading a[aria-expanded="false"]:after {
+        font-size: 20px;
+        line-height: 19px;
+    }
+    .footerText h4 {
+        font-size: 18px;
+        line-height: 23px;
+        margin: 0 0 10px;
+    }
+    .footerText p {
+        font-size: 14px;
+        line-height: 19px;
+        margin: 10px 0 20px;
+    }
+    .footerText a {
+        font-size: 25px;
+        line-height: 30px;
+        margin: 0 0 10px;
+    }
+    .copyRight p {
+        font-size: 12px;
+        line-height: 17px;
+        padding: 15px 0;
+    }
+    .footerText p>a {
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .faq_section .panel-default>.panel-heading+.panel-collapse>.panel-body {
+        font-size: 13px;
+        line-height: 22px;
+        padding: 0px 5px 20px;
+    }
+    .login_popup .modal-body {
+        padding: 10px 10px;
+    }
+    .login_popupForm h2 {
+        font-size: 20px;
+        line-height: 25px;
+        margin: 0 0 10px;
+    }
+    .login_popupForm p {
+        font-size: 13px;
+        line-height: 21px;
+        margin: 0 0 20px;
+    }
+    .login_popupForm input[type="email"],
+    .login_popupForm input[type="text"],
+    .login_popupForm input[type="password"] {
+        width: 100%;
+        height: 40px;
+        margin: 0 0 10px;
+        padding: 3px 15px;
+        font-size: 12px;
+    }
+    .Remeber_div label {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .forget_div a {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .login_popupForm input[type="submit"] {
+        padding: 8px 0;
+        font-size: 14px;
+        margin: 0;
+        height: 40px;
+    }
+    .already_text span {
+        font-size: 12px;
+        line-height: 20px;
+        margin: 10px 0 10px;
+    }
+    .WatchAnyTime_btn a span {
+        font-size: 11px;
+        line-height: 16px;
+    }
+    .WatchAnyTime_btn a {
+        font-size: 14px;
+        line-height: 19px;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .slicknav_menu {
+        display: block;
+    }
+    .main_header {
+        position: initial;
+    }
+    .flexRow {
+        display: block;
+    }
+    .nav_search {
+        position: relative;
+        margin: 0 0 20px;
+    }
+    .nav_login {
+        text-align: center;
+        margin: 0 0 20px;
+    }
+    .video_section {
+        padding: 10% 0;
+        margin: 0;
+    }
+    .banner_text h2 {
+        font-size: 25px;
+        line-height: 30px;
+        margin: 8px 0 5px;
+    }
+    .carousel-caption {
+        top: 0;
+        align-items: center;
+    }
+    .banner_text ul {
+        display: block;
+        margin: 0px 0 0;
+    }
+    .banner_text ul li {
+        margin: 0 0px 0 0px;
+        width: 100%;
+        display: block;
+    }
+    .banner_text ul li a {
+        padding: 10px 20px;
+        font-size: 16px;
+        line-height: 21px;
+        width: 100%;
+        display: block;
+        margin: 0 0 5px;
+    }
+    .banner_text>img {
+        width: 54%;
+    }
+    .video_box {
+        margin: 0 0 160px;
+    }
+    .video_boxText p {
+        font-size: 13px;
+        line-height: 21px;
+    }
+    .video_boxText a {
+        width: 145px;
+        height: 45px;
+    }
+    .btn_pink2 {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .video_boxText {
+        width: 90%;
+        padding: 10px 10px 40px;
+        bottom: -60px;
+    }
+    .video_box {
+        margin: 0 0 100px;
+    }
+    .startLearning_head h2 {
+        font-size: 22px;
+        line-height: 27px;
+    }
+    .startLearning_head p {
+        font-size: 13px;
+        line-height: 22px;
+        width: 100%;
+        margin: 10px auto 20px;
+    }
+    .startLearning_head ul li a {
+        font-size: 14px;
+        line-height: 45px;
+        padding: 10px 17px;
+    }
+    .startLearning_head {
+        margin: 0 0 20px;
+    }
+    .learnBox {
+        margin: 0 0 10px;
+    }
+    .learnBoxText {
+        bottom: -330px;
+    }
+    .WatchAnyTime_Box h4 {
+        font-size: 16px;
+        line-height: 21px;
+        margin: 10px 0;
+    }
+    .WatchAnyTime_Box {
+        padding: 20px 0px;
+        height: auto;
+        margin: 0 0 20px;
+    }
+    .WatchAnyTime_Box p {
+        font-size: 12px;
+        line-height: 17px;
+        width: 85%;
+        margin: 0 auto;
+    }
+    .WatchAnyTime_btn {
+        margin: 0px 0 0;
+    }
+    .Pricing_Box {
+        padding: 15px 10px;
+        width: 90%;
+        height: auto;
+        margin: 0 0 20px;
+    }
+    .Pricing_Box2 a {
+        font-size: 14px;
+        line-height: 19px;
+        bottom: 20px;
+    }
+    .Pricing_Box2 {
+        top: 30px;
+        right: 20px;
+        width: 85%;
+        height: 370px;
+    }
+    .Pricing_Box {
+        padding: 15px 10px;
+        width: 90%;
+        height: 325px;
+        margin: 0 0 100px;
+    }
+    .Pricing_Box h3 {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .Pricing_Box span {
+        font-size: 30px;
+        line-height: 35px;
+        margin: 10px 0 10px;
+    }
+    .Pricing_Box p {
+        font-size: 12px;
+        line-height: 22px;
+    }
+    .Pricing_Box ul li {
+        font-size: 12px;
+        line-height: 25px;
+        padding: 0 0 0 24px;
+    }
+    .Pricing_Box ul li:after {
+        top: 9px;
+        height: 8px;
+        width: 8px;
+    }
+    .Pricing_Box hr {
+        margin: 20px 20px;
+    }
+    .Saying_box {
+        margin: 10px 5px;
+        padding: 15px 10px;
+        height: 305px;
+    }
+    .Pricing_section {
+        padding: 7% 0 7%;
+    }
+    .blog_BoxOverlay p {
+        font-size: 13px;
+        line-height: 22px;
+        padding: 15px;
+    }
+    .blog_BoxOverlay {
+        top: -30px;
+        height: 100px;
+    }
+    .blog_Box p {
+        font-size: 12px;
+        line-height: 20px;
+        height: 160px;
+    }
+    .blog_Box {
+        padding: 85px 15px 20px;
+        margin: 40px 0 0px;
+    }
+    .faq_section .panel-default>.panel-heading a {
+        padding: 15px 5px;
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .faq_section .panel-default>.panel-heading a[aria-expanded="true"]:after {
+        font-size: 20px;
+        line-height: 14px;
+    }
+    .faq_section .panel-default>.panel-heading a[aria-expanded="false"]:after {
+        font-size: 20px;
+        line-height: 19px;
+    }
+    .footerText h4 {
+        font-size: 18px;
+        line-height: 23px;
+        margin: 0 0 10px;
+    }
+    .footerText p {
+        font-size: 14px;
+        line-height: 19px;
+        margin: 10px 0 20px;
+    }
+    .footerText a {
+        font-size: 25px;
+        line-height: 30px;
+        margin: 0 0 10px;
+    }
+    .copyRight p {
+        font-size: 12px;
+        line-height: 17px;
+        padding: 15px 0;
+    }
+    .footerText p>a {
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .faq_section .panel-default>.panel-heading+.panel-collapse>.panel-body {
+        font-size: 13px;
+        line-height: 22px;
+        padding: 0px 5px 20px;
+    }
+    .login_popup .modal-body {
+        padding: 10px 10px;
+    }
+    .login_popupForm h2 {
+        font-size: 20px;
+        line-height: 25px;
+        margin: 0 0 10px;
+    }
+    .login_popupForm p {
+        font-size: 13px;
+        line-height: 21px;
+        margin: 0 0 20px;
+    }
+    .login_popupForm input[type="email"],
+    .login_popupForm input[type="text"],
+    .login_popupForm input[type="password"] {
+        width: 100%;
+        height: 40px;
+        margin: 0 0 10px;
+        padding: 3px 15px;
+        font-size: 12px;
+    }
+    .Remeber_div label {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .forget_div a {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .login_popupForm input[type="submit"] {
+        padding: 8px 0;
+        font-size: 14px;
+        margin: 0;
+        height: 40px;
+    }
+    .already_text span {
+        font-size: 12px;
+        line-height: 20px;
+        margin: 10px 0 10px;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 479px) {
+    .slicknav_menu {
+        display: block;
+    }
+    .main_header {
+        position: initial;
+    }
+    .flexRow {
+        display: block;
+    }
+    .nav_search {
+        position: relative;
+        margin: 0 0 20px;
+    }
+    .nav_login {
+        text-align: center;
+        margin: 0 0 20px;
+    }
+    .video_section {
+        padding: 10% 0;
+        margin: 0;
+    }
+    .banner_text h2 {
+        font-size: 15px;
+        line-height: 20px;
+        margin: 8px 0 5px;
+    }
+    .carousel-caption {
+        top: 0;
+        align-items: center;
+    }
+    .banner_text ul {
+        display: block;
+        margin: 0px 0 0;
+    }
+    .banner_text ul li {
+        margin: 0 0px 0 0px;
+        width: 100%;
+        display: block;
+    }
+    .banner_text ul li a {
+        padding: 1px 20px;
+        font-size: 12px;
+        line-height: 20px;
+        width: 100%;
+        display: block;
+        margin: 0 0 5px;
+    }
+    .banner_text>img {
+        width: 54%;
+    }
+    .video_box {
+        margin: 0 0 160px;
+    }
+    .video_boxText p {
+        font-size: 12px;
+        line-height: 19px;
+    }
+    .video_boxText a {
+        width: 145px;
+        height: 45px;
+    }
+    .btn_pink2 {
+        font-size: 12px;
+        line-height: 17px;
+    }
+    .video_boxText {
+        width: 90%;
+        padding: 10px 10px 40px;
+        bottom: -60px;
+    }
+    .video_box {
+        margin: 0 0 100px;
+    }
+    .startLearning_head h2 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .startLearning_head p {
+        font-size: 12px;
+        line-height: 20px;
+        width: 100%;
+        margin: 10px auto 20px;
+    }
+    .startLearning_head ul li a {
+        font-size: 12px;
+        line-height: 45px;
+        padding: 10px 13px;
+    }
+    .startLearning_head {
+        margin: 0 0 20px;
+    }
+    .learnBox {
+        margin: 0 0 10px;
+    }
+    .learnBoxText {
+        bottom: -200px;
+    }
+    .WatchAnyTime_Box h4 {
+        font-size: 16px;
+        line-height: 21px;
+        margin: 10px 0;
+    }
+    .WatchAnyTime_Box {
+        padding: 20px 0px;
+        height: auto;
+        margin: 0 0 20px;
+    }
+    .WatchAnyTime_Box p {
+        font-size: 12px;
+        line-height: 17px;
+        width: 85%;
+        margin: 0 auto;
+    }
+    .WatchAnyTime_btn {
+        margin: 0px 0 0;
+    }
+    .Pricing_Box {
+        padding: 15px 10px;
+        width: 90%;
+        height: auto;
+        margin: 0 0 20px;
+    }
+    .Pricing_Box2 a {
+        font-size: 14px;
+        line-height: 19px;
+        bottom: 20px;
+    }
+    .Pricing_Box2 {
+        top: 30px;
+        right: 20px;
+        width: 85%;
+        height: 370px;
+    }
+    .Pricing_Box {
+        padding: 15px 10px;
+        width: 90%;
+        height: 325px;
+        margin: 0 0 100px;
+    }
+    .Pricing_Box h3 {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .Pricing_Box span {
+        font-size: 30px;
+        line-height: 35px;
+        margin: 10px 0 10px;
+    }
+    .Pricing_Box p {
+        font-size: 12px;
+        line-height: 22px;
+    }
+    .Pricing_Box ul li {
+        font-size: 12px;
+        line-height: 25px;
+        padding: 0 0 0 24px;
+    }
+    .Pricing_Box ul li:after {
+        top: 9px;
+        height: 8px;
+        width: 8px;
+    }
+    .Pricing_Box hr {
+        margin: 20px 20px;
+    }
+    .Saying_box {
+        margin: 10px 5px;
+        padding: 15px 10px;
+        height: 270px;
+    }
+    .Pricing_section {
+        padding: 7% 0 7%;
+    }
+    .blog_BoxOverlay p {
+        font-size: 13px;
+        line-height: 22px;
+        padding: 15px;
+    }
+    .blog_BoxOverlay {
+        top: -30px;
+        height: 100px;
+    }
+    .blog_Box p {
+        font-size: 13px;
+        line-height: 24px;
+        height: 100px;
+    }
+    .blog_Box {
+        padding: 100px 15px 20px;
+        margin: 40px 0 0px;
+    }
+    .faq_section .panel-default>.panel-heading a {
+        padding: 15px 5px;
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .faq_section .panel-default>.panel-heading a[aria-expanded="true"]:after {
+        font-size: 20px;
+        line-height: 14px;
+    }
+    .faq_section .panel-default>.panel-heading a[aria-expanded="false"]:after {
+        font-size: 20px;
+        line-height: 19px;
+    }
+    .footerText h4 {
+        font-size: 18px;
+        line-height: 23px;
+        margin: 0 0 10px;
+    }
+    .footerText p {
+        font-size: 14px;
+        line-height: 19px;
+        margin: 10px 0 20px;
+    }
+    .footerText a {
+        font-size: 25px;
+        line-height: 30px;
+        margin: 0 0 10px;
+    }
+    .copyRight p {
+        font-size: 12px;
+        line-height: 17px;
+        padding: 15px 0;
+    }
+    .footerText p>a {
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .faq_section .panel-default>.panel-heading+.panel-collapse>.panel-body {
+        font-size: 13px;
+        line-height: 22px;
+        padding: 0px 5px 20px;
+    }
+    .login_popup .modal-body {
+        padding: 10px 10px;
+    }
+    .login_popupForm h2 {
+        font-size: 20px;
+        line-height: 25px;
+        margin: 0 0 10px;
+    }
+    .login_popupForm p {
+        font-size: 13px;
+        line-height: 21px;
+        margin: 0 0 20px;
+    }
+    .login_popupForm input[type="email"],
+    .login_popupForm input[type="text"],
+    .login_popupForm input[type="password"] {
+        width: 100%;
+        height: 40px;
+        margin: 0 0 10px;
+        padding: 3px 15px;
+        font-size: 12px;
+    }
+    .Remeber_div label {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .forget_div a {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .login_popupForm input[type="submit"] {
+        padding: 8px 0;
+        font-size: 14px;
+        margin: 0;
+        height: 40px;
+    }
+    .already_text span {
+        font-size: 12px;
+        line-height: 20px;
+        margin: 10px 0 10px;
+    }
+}
