@@ -1,6 +1,7 @@
 @extends('layouts.master')
 @section('page_title', 'Offered Courses')
 @section('content')
+
 <style>
 .registerNowBtnDiv {
     /* margin: 20px; */
@@ -56,9 +57,19 @@ a.registerNowBtn {
                         </span>
                     </a>
                     <div class="registerNowBtnDiv">
-                        <a class="registerNowBtn" href="{{route('students.course_register.store',\App\Helpers\Qs::hash($course->id))}}">
-                            Register Now
-                        </a>
+                            
+                @php $contactsPhone = App\Models\CourseRegistration::where('courses_id',$course->id)->where('user_id',\Auth::user()->id)->first();
+                @endphp
+                @if($contactsPhone == NULL)
+   
+                <a class="registerNowBtn" href="{{route('students.course_register.store',\App\Helpers\Qs::hash($course->id))}}">
+                                Register Now</a>
+
+                            @else
+                                <a class="registerNowBtn" href="{{route('students.course_register.store',\App\Helpers\Qs::hash($course->id))}}">
+                                Registed</a>
+                            @endif
+
                     </div>
                 </div>
                 @endforeach

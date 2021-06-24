@@ -14,12 +14,21 @@ class OfferedCoursesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $courses = Courses::all();
-
+        // $takenCourses = ;
         // dd($courses);
         $courseRegistration = CourseRegistration::pluck('id');
+        
+        // echo auth()->user()->id;
+
+        // echo '<pre>';
+        // print_r($courses);
+        
+        // exit();
+
+        
 
         return view('pages.support_team.offeredCourses.index', compact('courses', 'courseRegistration'));
     }
