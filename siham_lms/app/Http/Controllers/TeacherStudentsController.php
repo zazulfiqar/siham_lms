@@ -32,7 +32,6 @@ class TeacherStudentsController extends Controller
             ->select('c.*','cr.*','u.name as student_name','u.email as student_email')
             ->get();
 
-
         return view('pages.support_team.teacher_students.index',compact('courses'));
     }
 

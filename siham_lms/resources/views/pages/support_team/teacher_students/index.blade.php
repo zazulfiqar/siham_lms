@@ -32,46 +32,20 @@
                         <tbody>
 
                         @foreach($courses as $course)
-                            <tr>
-                                <td>{{ $loop->iteration }}</td>
-                                <td>{{$course->time_slot}}</td>
-                                <td>{{$course->name}}</td>
-                                <td>{{$course->student_name}}</td>
-                                <td>{{$course->student_email}}</td>
+                            <!-- @if($course->courses_id==31)     -->
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{$course->time_slot}}</td>
+                                    <td>{{$course->id}} {{$course->name}}</td>
+                                    <td>{{$course->student_name}}</td>
+                                    <td>{{$course->student_email}}</td>
 
-{{--                                <td>{{$course->name}}</td>--}}
-{{--                                @if(isset($course->classes->name))--}}
-{{--                                    <td>{{$course->classes->name}}</td>--}}
-{{--                                @else--}}
-{{--                                    <td>not assign</td>--}}
-{{--                                @endif--}}
-                                <td>{{$course->code}}</td>
-                                <td>{{$course->description}}</td>
-{{--                                <td class="text-center">--}}
-{{--                                    <div class="list-icons">--}}
-{{--                                        <div class="dropdown">--}}
-{{--                                            <a href="#" class="list-icons-item" data-toggle="dropdown">--}}
-{{--                                                <i class="icon-menu9"></i>--}}
-{{--                                            </a>--}}
-{{--                                            <div class="dropdown-menu dropdown-menu-left">--}}
-{{--                                                edit--}}
-{{--                                                @if(Qs::userIsTeamSA())--}}
-{{--                                                    <a href="{{ route('teacher.scheduleAClass.edit', Qs::hash($s->id)) }}"--}}
-{{--                                                       class="dropdown-item"><i class="icon-pencil"></i> Edit</a>--}}
-{{--                                                @endif--}}
-{{--                                                Delete--}}
-{{--                                                @if(Qs::userIsSuperAdmin())--}}
-{{--                                                    <a id="{{ $s->id }}" onclick="confirmDelete(this.id)" href="#"--}}
-{{--                                                       class="dropdown-item"><i class="icon-trash"></i> Delete</a>--}}
-{{--                                                    <form method="post" id="item-delete-{{ $s->id }}"--}}
-{{--                                                          action="{{ route('teacher.scheduleAClass.destroy', Qs::hash($s->id)) }}"--}}
-{{--                                                          class="hidden">@csrf @method('post')</form>--}}
-{{--                                                @endif--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </td>--}}
-                            </tr>
+
+                                    <td>{{$course->code}}</td>
+                                    <td>{{$course->description}}</td>
+                                </tr>
+                            
+                            <!-- @endif -->
                         @endforeach
                         </tbody>
                     </table>

@@ -111,7 +111,6 @@ div#headingOne {
                                         @php
                                             $papersData  = \App\Models\Courses::where('id',$s->course_id)->first();
                                         @endphp
-                                        
                                     @else
                                         No Course
                                     @endif
