@@ -111,7 +111,7 @@ div#headingOne {
                                         @php
                                             $papersData  = \App\Models\Courses::where('id',$s->course_id)->first();
                                         @endphp
-                                            {{ $papersData->name }}
+                                           
                                     @else
                                         No Course
                                     @endif
