@@ -99,4 +99,11 @@ class TeacherCourseController extends Controller
     {
         //
     }
+
+    public function getbyid(Request $request,$id )
+    {
+        dd('Get ID Here');
+    }
+
+
 }

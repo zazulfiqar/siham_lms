@@ -331,6 +331,9 @@ Route::post('/std_paper_Destroy/{id}', [StdOnlinePaperController::class, 'destro
 
 Route::get('/Lecture_show_student', [LectureController::class, 'show'])->name('student.lecture.show');
 Route::get('/teacher/my_courses', [TeacherCourseController::class, 'index'])->name('teacher.my_courses');
+
+Route::get('/teacher/my_courses', [TeacherCourseController::class, 'index'])->name('teacher.my_courses');
+
 Route::get('/my_students', [TeacherStudentsController::class, 'index'])->name('teacher.my_students');
 
 
