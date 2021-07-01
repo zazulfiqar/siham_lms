@@ -143,6 +143,13 @@
                         </tr>
                         </thead>
                         <tbody>
+                            {{-- @php
+                                    echo "<pre>";
+            print_r($assignments);
+            echo "</pre>";
+
+            exit(); --}}
+                            {{-- @endphp --}}
                         @foreach($assignments as $assignment)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>

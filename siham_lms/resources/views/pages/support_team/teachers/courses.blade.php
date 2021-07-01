@@ -1,6 +1,16 @@
 @extends('layouts.master')
 @section('page_title', 'My Courses')
 @section('content')
+
+<style>
+    a.btn.DescriptionBtNCourse {
+    position: absolute;
+    bottom: 27px;
+    left: 40px;
+    background-color: #f41043;
+    color: white;
+}
+</style>
 <div class="card">
     <div class="card-header header-elements-inline">
         <h6 class="card-title">Courses assigned to you</h6>
@@ -70,7 +80,7 @@
                         <h3> {{$course->time_slot}}
                         </h3>
                         <h4>{{$course->name}}</h4>
-                        <p>SpMT-101</p>
+                        <p>{{$course->code}}</p>
                         <span class="link-text">
                             Teacher Not Showing
 
@@ -84,13 +94,16 @@
                         </span>
                         <br>
 
-                        <form class="" method="post" action="http://localhost/siham_lms/students/courcestudentDetails"
+
+                        {{-- <form class="" method="get" action="{{route('teacher.courcestudentDetails')}}"
                             enctype="multipart/form-data">
                             <input type="hidden" name="_token" value="W0ioJRAR5nayAZoJnh4WKI6MXCxHFl0SspY8BdPs"> <input
                                 type="hidden" name="_method" value="post"> <input type="hidden" value="31"
                                 name="course_id">
                             <input type="submit" value="Details" class="btn DescriptionBtNCourse">
-                        </form>
+                        </form> --}}
+                        <a href="{{asset('teacher/courcestudentDetails?id='.$course->id)}}" class="btn DescriptionBtNCourse">Details</a>
+
                     </a>
                 </div>
 

@@ -30,6 +30,12 @@ class TeacherCourseController extends Controller
         $id = \Auth::user()->id;
 //        dd($id);
         $d['courses'] = $this->my_class->getCoursesByTeacherId($id);
+
+        //   echo "<pre>";
+        //     print_r($d['courses']);
+        //     echo "</pre>";
+
+        //     exit();
 //        dd($d['courses']);
         return view('pages.support_team.teachers.courses',$d);
     }
@@ -43,6 +49,8 @@ class TeacherCourseController extends Controller
     {
         //
     }
+
+ 
 
     /**
      * Store a newly created resource in storage.
