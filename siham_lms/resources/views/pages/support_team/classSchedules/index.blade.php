@@ -36,7 +36,7 @@ border-bottom-color: #b3b3b3;
 $papersData = \App\Models\Courses::where('id',$s->course_id)->first();
 
 @endphp
-{{ $papersData->name }}
+
 
 
 @else

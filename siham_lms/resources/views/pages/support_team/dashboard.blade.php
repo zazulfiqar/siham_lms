@@ -286,7 +286,27 @@ div#headingOne {
 
     </style>
 
+
+
+
+
+
 <div class="row">
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="card flex-row flex-wrap" >
+            <div class="card-footer w-100 text-muted">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>   Privacy Policy
+            </div>
+            @foreach($policy as $policysingle)
+                <div class="card-body cardborderset">
+                    <p>{{  $policysingle->policy }}</p>
+                </div>
+            @endforeach
+        </div>
+    </div>
+
+
 
     <div class="col-md-8 col-sm-12 col-xs-12">
     </div>

@@ -55,7 +55,7 @@
                                     </div>
                                 </div>
 
-                                {{--                                @if(Auth::user()->user_type == 'admin' || Auth::user()->user_type == 'super_admin')--}}
+                               @if(Auth::user()->user_type == 'admin' || Auth::user()->user_type == 'super_admin')
                                 <div class="form-group row">
                                     <label for="teacher_id" class="col-lg-3 col-form-label font-weight-semibold">Select
                                         Teacher <span class="text-danger">*</span></label>
@@ -65,13 +65,13 @@
                                             <option value=""></option>
                                             @foreach($teachers as $t)
                                                 <option
-                                                    {{ old('teacher_id') == $t->id ? 'selected' : '' }} value="{{ $t->id }}">{{ $t->name }}</option>
+                                                   {{ old('teacher_id') == $t->id ? 'selected' : '' }} value="{{ $t->id }}">{{ $t->id }}{{ $t->name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                 </div>
-                                {{--                                @else--}}
-                                {{--                                @endif--}}
+                                                         @else
+                                        @endif
 
 
                                 <div class="form-group row">

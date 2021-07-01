@@ -203,7 +203,7 @@
                 </li>
 
                 {{-- Evaluation --}} @endif @if(Qs::userIsTeamSAT())
-                <li class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['students.create', 'students.list', 'students.edit', 'students.show', 'students.promotion', 'students.promotion_manage', 'students.graduated']) ? 'nav-item-expanded nav-item-open' : '' }} ">
+                <!-- <li class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['students.create', 'students.list', 'students.edit', 'students.show', 'students.promotion', 'students.promotion_manage', 'students.graduated']) ? 'nav-item-expanded nav-item-open' : '' }} ">
                     <a href="#" class="nav-link"><i class="fa fa-sticky-note"></i> <span> Reporting</span></a>
 
                     <ul class="nav nav-group-sub" data-submenu-title="Manage Students">
@@ -235,23 +235,10 @@
                             </ul>
                         </li>
                         @endif
-                        <!--                            {{--                            @if(Qs::userIsTeamSA())--}}-->
-
-                        <!--                            {{--                            Student Promotion--}}-->
-                        <!--                            {{--                            <li class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['students.promotion', 'students.promotion_manage']) ? 'nav-item-expanded' : '' }}"><a href="#" class="nav-link {{ in_array(Route::currentRouteName(), ['students.promotion', 'students.promotion_manage' ]) ? 'active' : '' }}">Student Promotion</a>--}}-->
-                        <!--                            {{--                            <ul class="nav nav-group-sub">--}}-->
-                        <!--                            {{--                                <li class="nav-item"><a href="{{ route('students.promotion') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['students.promotion']) ? 'active' : '' }}">Promote Students</a></li>--}}-->
-                        <!--                            {{--                                <li class="nav-item"><a href="{{ route('students.promotion_manage') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['students.promotion_manage']) ? 'active' : '' }}">Manage Promotions</a></li>--}}-->
-                        <!--                            {{--                            </ul>--}}-->
-
-                        <!--                            {{--                            </li>--}}-->
-
-                        <!--                            {{--                            Student Graduated--}}-->
-                        <!--                            {{--                            <li class="nav-item"><a href="{{ route('students.graduated') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['students.graduated' ]) ? 'active' : '' }}">Students Graduated</a></li>--}}-->
-                        <!--                            {{--                            @endif--}}-->
+                 
 
                     </ul>
-                </li>
+                </li> -->
                 @endif {{-- Exam--}} {{-- @if(Qs::userIsTeamSAT())--}} {{--
                 <li class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['exams.index', 'exams.edit', 'grades.index', 'grades.edit', 'marks.index', 'marks.manage', 'marks.bulk', 'marks.tabulation', 'marks.show', 'marks.batch_fix',]) ? 'nav-item-expanded nav-item-open' : '' }} ">--}} {{-- <a href="#" class="nav-link"><i class="fa fa-pencil-square"></i> <span> Exams</span></a>--}} {{--
                     <ul class="nav nav-group-sub" data-submenu-title="Manage Exams">--}} {{-- @if(Qs::userIsTeamSA())--}} {{-- --}}{{-- Exam list--}} {{--
@@ -485,15 +472,24 @@
 
                     <li class="nav-item">
                         <a href="{{ route('teacher.my_courses') }}" class="nav-link ">
-                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <i class="fa fa-book" aria-hidden="true"></i>
                             <span>My Courses</span></a>
                     </li>
 
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a href="{{ route('teacher.my_students') }}" class="nav-link ">
                             <i class="fa fa-clock-o" aria-hidden="true"></i>
                             <span>My Students</span></a>
-                    </li>
+                    </li> -->
+
+
+
+                    <li class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['students.create', 'students.list', 'students.edit', 'students.show', 'students.promotion', 'students.promotion_manage', 'students.graduated']) ? 'nav-item-expanded nav-item-open' : '' }} ">
+                        <a href="#" class="nav-link"><i class="fa fa-table"
+                                                        aria-hidden="true"></i><span>Upload Study Material </span></a>
+
+                        <ul class="nav nav-group-sub" data-submenu-title="Manage Students">
+
 
 
 
@@ -541,7 +537,7 @@
                             <i class="fa fa-clock-o" aria-hidden="true"></i>
                             <span>View Student Feedback</span></a>
                     </li>
-
+                </ul>
 
                     <li class="nav-item">
                         <a href="{{ route('teachers.teacer_rules') }}" class="nav-link ">

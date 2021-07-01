@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\ClassSchedule;
 use App\Models\CourseRegistration;
 use App\Helpers\Qs;
+use App\Models\Policy;
 use App\Repositories\UserRepo;
 use Illuminate\Support\Facades\DB;
 
@@ -44,6 +45,8 @@ class HomeController extends Controller
         $d=[];
         if (Qs::userIsTeacher())
         {
+
+            $d['policy']=Policy::where('role_type','teacher')->orderBy('role_type', 'asc')->get();
         $d['teacher_instructions'] = $this->user->getAllTeacherInstructions();
             $d['teacher_notifications'] = $this->user->getAllTeacherNotifications();
             $d['teacher_updates'] = $this->user->getAllTeacherUpdates();

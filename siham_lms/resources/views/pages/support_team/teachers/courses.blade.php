@@ -3,20 +3,56 @@
 @section('content')
 
 <style>
-    a.btn.DescriptionBtNCourse {
+ a.details {
+    font-size: 14px;
     position: absolute;
-    bottom: 27px;
-    left: 40px;
-    background-color: #f41043;
-    color: white;
+}
+.social-box {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  margin-right: 1em;
+  /* background-color: steelblue; */
+  text-align: center;
+}
+
+.main_cardClass {
+    background-color: #f7f7f7;
+    height: 440px;
+    padding: 10px;
+}
+
+.social-box:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+.social-box {  
+    color: #f41043 !important;
+    font-size: 2em;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+a.iconcolor {
+    color: #e91e63;
+    text-align: center;
+    padding-left: 47px;
+}
+
+.container_div{
+  margin-right: 0;
 }
 </style>
 <div class="card">
-    <div class="card-header header-elements-inline">
+    <!-- <div class="card-header header-elements-inline">
         <h6 class="card-title">Courses assigned to you</h6>
         {!! Qs::getPanelOptions() !!}
-    </div>
-    <div class="card-body">
+    </div> -->
+    <!-- <div class="card-body">
         <ul class="nav nav-tabs nav-tabs-highlight">
             {{-- <li class="nav-item"><a href="#new-course" class="nav-link active" data-toggle="tab">Add New
                     Class</a>--}}
@@ -67,22 +103,25 @@
         </div>
 
 
-    </div>
+    </div> -->
 
 
     <div class="card-body cardborderset">
         <section class="page-contain">
             <div class="row">
                 @foreach($courses as $course)
-                <div class="col-md-6">
+                
+                <div class="col-md-4">
+                    <div class="main_cardClass">
                     <a href="#" class="data-card">
 
                         <h3> {{$course->time_slot}}
                         </h3>
                         <h4>{{$course->name}}</h4>
+                       
                         <p>{{$course->code}}</p>
                         <span class="link-text">
-                            Teacher Not Showing
+                            {{$course->code}}
 
 
                             <svg width="25" height="16" viewBox="0 0 25 16" fill="none"
@@ -92,21 +131,46 @@
                                     fill="#753BBD"></path>
                             </svg>
                         </span>
+                        
                         <br>
+                        
 
 
-                        {{-- <form class="" method="get" action="{{route('teacher.courcestudentDetails')}}"
+                        <!-- {{-- <form class="" method="get" action="{{route('teacher.courcestudentDetails')}}"
                             enctype="multipart/form-data">
                             <input type="hidden" name="_token" value="W0ioJRAR5nayAZoJnh4WKI6MXCxHFl0SspY8BdPs"> <input
                                 type="hidden" name="_method" value="post"> <input type="hidden" value="31"
                                 name="course_id">
                             <input type="submit" value="Details" class="btn DescriptionBtNCourse">
-                        </form> --}}
-                        <a href="{{asset('teacher/courcestudentDetails?id='.$course->id)}}" class="btn DescriptionBtNCourse">Details</a>
+                        </form> --}} -->
+                       
 
                     </a>
-                </div>
 
+
+
+                
+
+                <div class='container_div'>
+                @php $id=$course->id; @endphp
+                    <div class='social-box'>
+                      <a href="{{asset('teacher/courcestudentStudents?id='.$id)}}" class="iconcolor"  alt="Students"><i class="fa fa-user"></i></a>
+                    </div>
+                    <div class='social-box'>
+                      <a href="{{asset('teacher/courcestudentassigements?id='.$id)}}" class="iconcolor" alt="Assignments"><i class='fa fa-paperclip'></i></a>
+                    </div>
+                    <div class='social-box'>
+                        <a href="{{asset('teacher/courcestudentpapers?id='.$id)}}" class="iconcolor" alt="Papers"><i class='fa fa-sticky-note'></i></a>
+                      </div>
+                      <div class='social-box'>
+                        <a href="{{asset('teacher/courcestudentDetails?id='.$course->id)}}" class="details">Details</a>
+                      </div>
+                </div>
+                
+                </div>
+               
+            </div>
+            
         @endforeach
             </div>
 

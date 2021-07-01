@@ -338,6 +338,7 @@ Route::get('/teacher/my_courses', [TeacherCourseController::class, 'index'])->na
 Route::get('/teacher/courcestudentDetails', [TeacherStudentsController::class, 'courcestudentDetails'])->name('teacher.courcestudentDetails');
 Route::get('/teacher/courcestudentStudents', [TeacherStudentsController::class, 'courcestudentStudents'])->name('teacher.courcestudentStudents');
 Route::get('/teacher/courcestudentassigements', [TeacherStudentsController::class, 'courcestudentassigements'])->name('teacher.courcestudentassigements');
+Route::get('/teacher/courcestudentpapers', [TeacherStudentsController::class, 'courcestudentpapers'])->name('teacher.courcestudentpapers');
 
 
 Route::get('/my_students', [TeacherStudentsController::class, 'index'])->name('teacher.my_students');

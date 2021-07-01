@@ -13,22 +13,25 @@
 
         {{--        {{dd($courses)}}--}}
         <div class="card-header header-elements-inline">
-            <h6 class="card-title">Course Details</h6>
+            <h6 class="card-title"> Course Details </h6>
             {!! Qs::getPanelOptions() !!}
         </div>
 
         
         <div class="card-body">
-            <ul class="nav nav-tabs nav-tabs-highlight">
+            <!-- <ul class="nav nav-tabs nav-tabs-highlight">
                 <li class="nav-item"><a href="#manage-course" class="nav-link" data-toggle="tab">Manage Students click
                         here</a>
                 </li>
 
-            </ul>
+            </ul> -->
             <div class="tab-content">
 
-                <a href="{{asset('teacher/courcestudentStudents?id='.$id)}}" class="form-control">Assign Students </a>
-                <a href="{{asset('teacher/courcestudentassigements?id='.$id)}}" class="form-control">Assign Assignment </a>
+                <a href="{{asset('teacher/courcestudentStudents?id='.$id)}}" class="form-control">Students </a>
+                <br>
+                <a href="{{asset('teacher/courcestudentassigements?id='.$id)}}" class="form-control">Assignments </a>
+                <br>
+                <a href="{{asset('teacher/courcestudentpapers?id='.$id)}}" class="form-control">Papers </a>
 
                 {{-- <h6 class="card-title">Assign Students</h6> --}}
            

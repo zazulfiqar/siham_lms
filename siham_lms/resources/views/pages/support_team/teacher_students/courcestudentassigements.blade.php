@@ -19,12 +19,12 @@
 
         
         <div class="card-body">
-            <ul class="nav nav-tabs nav-tabs-highlight">
+            <!-- <ul class="nav nav-tabs nav-tabs-highlight">
                 <li class="nav-item"><a href="#manage-course" class="nav-link" data-toggle="tab">Manage Students click
                         here</a>
                 </li>
 
-            </ul>
+            </ul> -->
             <div class="tab-content">
 
                
